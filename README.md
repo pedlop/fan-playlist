@@ -26,9 +26,9 @@ Para o desenvolvimento do projeto serão utilizadas ferramentas para auxiliar na
 >* Clone o projeto através do GitKraken, copie e cole o link HTTPS;
 >* Vá no diretório `cd fan-playlist` e `cd fan-app` em que o projeto foi clonado pela linha de comando;
 >* Digite: `ng serve`
->* Acesse no seu browser o `localhost:<porta>` indicado;
+>* Acesse no seu browser o `localhost:4200`
 >* Projeto configurado e rodando.
 
 **Caso você queira criar um novo Component:**
->* No diretório do projeto:
->* `ng generate component [nome]`
+* No diretório do projeto:
+> `ng g (ou 'generate') component <nome>`
