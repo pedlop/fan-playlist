@@ -3,6 +3,11 @@ Repositório vinculado a Projeto privado no Bitbucket e criação realizada para
 
 Para quem tem o acesso requerido, segue o link para a documentação: [Documentação FanPlaylist](https://bitbucket.org/asbuilt/mobile/src/3012639dfe211020140360a5eb911e45eaa1ba61/docApplication/?at=dev-clean).
 
+Índice
+--- 
+- [Tecnologias Utilizadas](#quais-as-tecnologias-utilizadas)
+- [Rodando Projeto](#como-faço-para-rodar-o-projeto)
+
 ## **Quais as Tecnologias utilizadas?** ##
 
 Para o desenvolvimento do projeto serão utilizadas ferramentas para auxiliar na Gerência do Projeto e na construção do software. As seguintes tecnologias serão utilizadas:
