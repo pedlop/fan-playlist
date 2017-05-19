@@ -37,12 +37,12 @@ Para o desenvolvimento do projeto serão utilizadas ferramentas para auxiliar na
 
 **Caso você não tenha o ambiente Anglular CLI configurado:**
 >* Faça o download e a instalação do [Node.js](https://nodejs.org/en/);
->* Na linha de comando:
 >* `npm install`
 >* `npm install -g @angular/cli`
+>* Na linha de comando:
 
 **Caso o ambiente já esteja configurado:**
->* Clone o projeto através do GitKraken (ou através da [linha de comando](#clonando-projeto-pela-linha-de-comando)), copie e cole o link HTTPS;
+>* Clone o projeto através do GitKraken (ou através da linha de comando [orientação abaixo]), copie e cole o link HTTPS;
 >* Vá no diretório `cd fan-playlist` e `cd fan-app` em que o projeto foi clonado pela linha de comando;
 >* Digite: `ng serve`
 >* Acesse no seu browser o `localhost:4200`
