@@ -7,12 +7,14 @@ import { RouterModule }   from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { RegistrarComponent } from './registrar/registrar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    RegistrarComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,10 @@ import { HomeComponent } from './home/home.component';
       {
         path: 'login',
         component: LoginComponent,
+      },
+      {
+        path: 'registrar',
+        component: RegistrarComponent
       }
     ])
   ],
