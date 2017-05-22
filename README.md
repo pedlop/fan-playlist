@@ -13,8 +13,8 @@ Para quem tem o acesso requerido, segue o link para a documentação: [Documenta
 Para o desenvolvimento do projeto serão utilizadas ferramentas para auxiliar na Gerência do Projeto e na construção do software. As seguintes tecnologias serão utilizadas:
 
 **Linguagem de Programação & Frameworks:**
-- [Angular 4](https://angular.io/) - _ Framework JavaScript open-source, mantido pelo Google, que auxilia na execução de single-page applications._
-- [Java](https://www.oracle.com/java/index.html) - _ Linguagem de programação interpretada orientada a objetos._
+- [Angular 4](https://angular.io/) - _Framework JavaScript open-source, mantido pelo Google, que auxilia na execução de single-page applications._
+- [Java](https://www.oracle.com/java/index.html) - _Linguagem de programação interpretada orientada a objetos._
 - [Spark](http://sparkjava.com/) - _Um micro framework para criar aplicações web em Java 8._
 - [Spring Data](http://projects.spring.io/spring-data/) - _Fornece um modelo de programação familiar e consistente baseado em Spring para acesso a dados, mantendo os traços especiais do armazenamento de dados subjacente._
 - [Hibernate](http://hibernate.org/) - _Framework para o mapeamento objeto-relacional escrito na linguagem Java._
@@ -42,19 +42,21 @@ Para o desenvolvimento do projeto serão utilizadas ferramentas para auxiliar na
 
 **Caso você não tenha o ambiente Anglular CLI configurado:**
 >* Faça o download e a instalação do [Node.js](https://nodejs.org/en/);
+>* Na linha de comando:
 >* `npm install`
 >* `npm install -g @angular/cli`
->* Na linha de comando:
 
 **Caso o ambiente já esteja configurado:**
->* Clone o projeto através do GitKraken (ou através da linha de comando [orientação abaixo]), copie e cole o link HTTPS;
+>* Clone o projeto através do GitKraken, copie e cole o link HTTPS;
+>* Ou [Clonando pela linha de comando](#clonando-projeto-pela-linha-de-comando);
 >* Vá no diretório `cd fan-playlist` e `cd fan-app` em que o projeto foi clonado pela linha de comando;
 >* Digite: `ng serve`
 >* Acesse no seu browser o `localhost:4200`
 >* Projeto configurado e rodando.
 
-**Clonando Projeto pela Linha de Comando:**
-> * Windows (cmd):
+#### **Clonando Projeto pela Linha de Comando:**
+>* Caso não tenha o GitKraken:
+>* Vá na linha de comando e digite:
 > `git clone https://github.com/pedlop/fan-playlist.git`
 
 **Caso você queira criar um novo Component:**
