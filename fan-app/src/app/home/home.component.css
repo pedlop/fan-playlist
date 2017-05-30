@@ -11,6 +11,11 @@ h3, h4 {
 .container {
     padding: 80px 120px;
 }
+@media (max-width: 600px) {
+    .container {
+        padding: 40px 60px; /* Aumenta o container em dispositivos menores - IMPORTANTE */ 
+    }
+}
 .person {
     border: 10px solid transparent;
     margin-bottom: 25px;
@@ -26,14 +31,18 @@ h3, h4 {
     filter: grayscale(90%); /* make all photos black and white */ 
     width: 100%; /* Set width to 100% */
     margin: auto;
+    /*padding: 0px 120px;*/
 }
 .carousel-caption h3 {
     color: #fff !important;
 }
 @media (max-width: 600px) {
-.carousel-caption {
-    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-}
+	carousel-caption h3 {
+        font-size: 12px; /* Diminui o tamanho da fonte para que apareça formatado corretamente em dispositivos menores - IMPORTANTE */
+    }
+    .carousel-caption p {
+        font-size: 14px;
+    }
 }
 .bg-1 {
     background: #2d2d30;
@@ -99,6 +108,14 @@ h3, h4 {
 }
 .navbar li a, .navbar .navbar-brand { 
     color: #d5d5d5 !important;
+}
+/*.navbar li a, .navbar .navbar-city {
+    color: #d5d5d5 !important;
+}*/
+@media (max-width: 600px) {
+    .navbar-brand .nav-city {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide*/ 
+    }
 }
 .navbar-nav li a:hover {
     color: #fff !important;
