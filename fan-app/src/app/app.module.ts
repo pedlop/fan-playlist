@@ -8,13 +8,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { RankingComponent } from './ranking/ranking.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegistrarComponent
+    RegistrarComponent,
+    RankingComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,10 @@ import { RegistrarComponent } from './registrar/registrar.component';
       {
         path: 'registrar',
         component: RegistrarComponent
+      },
+      {
+        path: 'ranking',
+        component: RankingComponent
       }
     ])
   ],
