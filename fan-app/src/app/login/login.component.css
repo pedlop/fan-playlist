@@ -1,14 +1,26 @@
-
-/*
-    Note: It is best to use a less version of this file ( see http://css2less.cc
-    For the media queries use @screen-sm-min instead of 768px.
-    For .omb_spanOr use @body-bg instead of white.
-*/
+body{
+  border-radius:0px!important;
+    box-shadow:1px 1px 4px rgba(0,0,0,0.4);
+    background-position: center center;
+    background-repeat: repeat;
+    background-image: url(http://poracaso.com/wp-content/uploads/2016/10/show-2015-brasil.jpg); 
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
 
 @media (min-width: 768px) {
     .omb_row-sm-offset-3 div:first-child[class*="col-"] {
         margin-left: 25%;
     }
+}
+
+.omb_login h2{
+    color: #2d2d30;
+    font-size: 2.5em;
+    background-color:rgba(229, 229, 229, 0.9);
+    margin-left: 25.75%;
+    margin-right: 25.75%; 
 }
 
 .omb_login .omb_authTitle {
@@ -59,7 +71,7 @@
 	width: 2em;
 }
 .omb_login .omb_loginForm  .help-block {
-    color: red;
+    color: #D0C2C2;
 }
 
 	
@@ -67,6 +79,7 @@
     .omb_login .omb_forgotPwd {
         text-align: right;
 		margin-top:10px;
+        background-color: rgba(229, 229, 229, 0.9);
  	}		
 }
 
@@ -113,4 +126,22 @@
 .material-switch > input[type="checkbox"]:checked + label::after {
     background: inherit;
     left: 20px;
+}
+
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 38px;
+}
+footer a {
+    color: #f5f5f5;
+}
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+
+* {
+    margin: 20;
+    padding:0;
 }
