@@ -10,3 +10,8 @@ h2{
 small{
   color: #2E2E2E
 }
+
+.panel-default {
+opacity: 0.9;
+padding: 30px;
+}
