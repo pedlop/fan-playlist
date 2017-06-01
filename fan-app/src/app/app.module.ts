@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { RankingComponent } from './ranking/ranking.component';
+import { MusicasComponent } from './musicas/musicas.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RankingComponent } from './ranking/ranking.component';
     LoginComponent,
     HomeComponent,
     RegistrarComponent,
-    RankingComponent
+    RankingComponent,
+    MusicasComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,7 @@ import { RankingComponent } from './ranking/ranking.component';
       },
       {
         path: 'login',
-        component: LoginComponent,
+        component: LoginComponent
       },
       {
         path: 'registrar',
@@ -39,6 +41,10 @@ import { RankingComponent } from './ranking/ranking.component';
       {
         path: 'ranking',
         component: RankingComponent
+      },
+      {
+        path: 'musicas',
+        component: MusicasComponent
       }
     ])
   ],
