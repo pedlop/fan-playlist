@@ -1,5 +1,3 @@
-
-
 .card {
     padding-top: 20px;
     margin: 10px 0 20px 0;
@@ -15,6 +13,12 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+.cardheader {
+    padding: 25px;
+    color: #FFFAFA;
+    font-size: 30px;
+    font-family: Chalkduster;
 }
 
 .card .card-heading {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <!-- Site desenvolvido pela equipe ASBuilT -->
   <title>FanPlaylist</title>
   <meta charset="utf-8">
 
@@ -20,6 +20,7 @@
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
 
+
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <div class="row">
@@ -27,14 +28,14 @@
 
                 <div class="card hovercard" *ngFor="let ranking of rankings">
                     <div class="cardheader">
-
+                        {{ranking.colocacao}}ª
                     </div>
                     <div class="avatar">
                         <img alt="" src={{ranking.fotoArtista}}>
                     </div>
                     <div class="info">
                         <div class="title">
-                            <a target="_blank" href={{ranking.fotoAlbum}}>{{ranking.musica}} - {{ranking.colocacao}}</a>
+                            <a target="_blank" href={{ranking.fotoAlbum}}>{{ranking.musica}} <!--- {{ranking.colocacao}}--></a>
                         </div>
                         <div class="desc">{{ranking.album}}</div>
                     </div>
