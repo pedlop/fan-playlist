@@ -1,0 +1,76 @@
+[{
+    "titulo" : "O Céu Explica Tudo",
+    "ano" : "2017",
+    "imagem" : "../../assets/img/Henrique-e-Juliano-O-Céu-Explica-Tudo.jpg",
+    "musicas" : [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "titulo" : "Novas Historias",
+    "ano" : "2015",
+    "imagem" : "../../assets/img/HeJ-Novas-Historias.jpg",
+    "musicas" : [
+      "Na Hora da Raiva",
+      "Como É Que a Gente Fica",
+      "Ele Quer Ser Eu",
+      "Parece Piada",
+      "Flor e o Beija-Flor (feat. Marília Mendonça)",
+      "Deixa Ela Saber",
+      "Brigas de Amor",
+      "Só Eu pra Te Amar",
+      "Nada Nada",
+      "Tudo Virou Saudade",
+      "Colecionando Bobo",
+      "De Vez Outra Vez",
+      "Contar pra Quê",
+      "Vida"
+    ]
+},
+{
+    "titulo" : "Ao Vivo em Brasília",
+    "ano" : "2014",
+    "imagem" : "https://www.henriqueejuliano.com.br/uploads/cache/discografia/fd6e6c407db03d333334c3061d8f1fa1-370x370.jpg",
+    "musicas" : [
+      "Gordinho Saliente",
+      "Até Você Voltar",
+      "Céu Particular",
+      "Eu Me Enrosquei de Novo",
+      "Faz Tempo",
+      "Pra Que Juízo",
+      "Quem Ama Sempre Entende",
+      "Jesus Apaga a Luz",
+      "Sereia",
+      "Às Vezes",
+      "Cuida Bem Dela",
+      "Mudando de Assunto",
+      "Estrelas Cadentes",
+      "É Fake",
+      "Não To Valendo Nada",
+      "Eu Chamo Você Volta",
+      "Recaídas",
+      "Calafrio",
+      "Não Tem Dó de Mim",
+      "Sem Avisar",
+      "Não Fala Meu Nome",
+      "Não Sou Caloteiro"
+    ]
+  }
+]

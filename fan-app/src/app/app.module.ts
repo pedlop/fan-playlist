@@ -4,6 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CollapseModule } from 'ngx-bootstrap/collapse'
+
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -25,6 +30,9 @@ import { MusicasComponent } from './musicas/musicas.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    CarouselModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    CollapseModule.forRoot(),
     RouterModule.forRoot([
       {
         path: '',

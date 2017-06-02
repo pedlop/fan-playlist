@@ -12,4 +12,18 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  public isCollapsed:boolean = false;
+
+  public abreInfo : boolean = false;
+  public abreInfo2 : boolean = false;
+  public abreInfo3 : boolean = false;
+  public abreInfo4 : boolean = false;
+
+  public collapsed(event:any):void {
+    console.log(event);
+  }
+ 
+  public expanded(event:any):void {
+    console.log(event);
+  }
 }

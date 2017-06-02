@@ -20,30 +20,21 @@
 
   <div class="container">
 
-    <div class="row" id="conteudo">
-      <div class="col-md-2"><img src="../../assets/img/Henrique-e-Juliano-O-Céu-Explica-Tudo.jpg" class="img-responsive center-block"></div> 
+    <div class="row" id="conteudo" *ngFor="let item of listaMusicas" >
+      <div class="col-md-2"><img src="{{item.imagem}}" class="img-responsive center-block"></div> 
       <div class="col-sm-4">
-        <h2 class="titulo-album">TITULO</h2>
+        <h2 class="titulo-album">{{item.titulo}}</h2>
         <h3 class="subtitulo-album">Henrique e Juliano</h3>
-        <p class="texto-album">Nullam sapien massa, aliquam in cursus ut, ullamcorper in tortor. 
-          Aliquam mauris arcu, tristique a lobortis vitae, condimentum feugiat justo.</p>  
+        <p class="texto-album">{{item.ano}}</p>  
         <div class="well">
-          <ul class="list-group checked-list-box">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item" data-checked="true">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+          <ul class="list-group checked-list-box" *ngFor="let musica of item.musicas" >
+            <li class="list-group-item">{{musica}}</li>
+            
           </ul>
         </div>
       </div>
 
-      <div class="col-md-2"><img src="../../assets/img/HeJ-Novas-Historias.jpg" class="img-responsive center-block"></div> 
+      <!--<div class="col-md-2"><img src="../../assets/img/HeJ-Novas-Historias.jpg" class="img-responsive center-block"></div> 
       <div class="col-sm-4">
         <h2 class="titulo-album">TITULO</h2>
         <h3 class="subtitulo-album">Henrique e Juliano</h3>
@@ -87,7 +78,7 @@
             <li class="list-group-item">Vestibulum at eros</li>
           </ul>
         </div>
-      </div>
+      </div>-->
       
     </div> 
   </div>
