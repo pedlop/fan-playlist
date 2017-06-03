@@ -19,6 +19,8 @@ Para o desenvolvimento do projeto serão utilizadas ferramentas para auxiliar na
 - [Spring Data](http://projects.spring.io/spring-data/) - _Fornece um modelo de programação familiar e consistente baseado em Spring para acesso a dados, mantendo os traços especiais do armazenamento de dados subjacente._
 - [Hibernate](http://hibernate.org/) - _Framework para o mapeamento objeto-relacional escrito na linguagem Java._
 - [JUnit](http://junit.org/junit4/) - _Estrutura simples para escrever testes repetitivos. É uma instância da arquitetura xUnit para estruturas de teste de unidade._
+- [ngx-bootstrap](http://valor-software.com/ngx-bootstrap/) - _Native Angular widgets for Bootstrap 3 and Bootstrap._
+- [PrimeNG](https://www.primefaces.org/primeng/) - _É uma coleção de componentes ricos de UI para Angular 2._
 
 **Gerenciador de Dependências:**
 - [Maven](https://maven.apache.org/) - _Ferramenta de gerenciamento e compreensão de projetos de software. Com base no conceito de um modelo de objeto de projeto (POM), o Maven pode gerenciar a compilação, relatórios e documentação de um projeto a partir de uma peça central de informação._

@@ -6,8 +6,13 @@ import { RouterModule }   from '@angular/router';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { CollapseModule } from 'ngx-bootstrap/collapse'
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
+import {AccordionModule} from 'primeng/components/accordion/accordion';
+import {MenuItem} from 'primeng/components/common/api';
+import {SelectButtonModule} from 'primeng/primeng';
+import {ToggleButtonModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -33,6 +38,10 @@ import { MusicasComponent } from './musicas/musicas.component';
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
     CollapseModule.forRoot(),
+    TypeaheadModule.forRoot(),
+    AccordionModule,
+    SelectButtonModule,
+    ToggleButtonModule,
     RouterModule.forRoot([
       {
         path: '',

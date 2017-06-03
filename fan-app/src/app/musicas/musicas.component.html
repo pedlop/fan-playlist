@@ -11,80 +11,72 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!--<link
-      rel="stylesheet"
-      type="text/css"
-      href="app.component.css">-->
+
+  <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/omega/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
+  <link rel="stylesheet" type="text/css" href="/node_modules/font-awesome/css/font-awesome.min.css" />
+
 </head>
 <body>
 
-  <div class="container">
+  <!--<div>    
+    <h3>Multiple</h3>
+    <p-selectButton [options]="types" [(ngModel)]="selectedTypes" multiple="multiple"></p-selectButton>
+    <p>Selected Types: <span *ngFor="let type of selectedTypes">{{type}} </span></p>
 
-    <div class="row" id="conteudo" *ngFor="let item of listaMusicas" >
-      <div class="col-md-2"><img src="{{item.imagem}}" class="img-responsive center-block"></div> 
-      <div class="col-sm-4">
-        <h2 class="titulo-album">{{item.titulo}}</h2>
-        <h3 class="subtitulo-album">Henrique e Juliano</h3>
-        <p class="texto-album">{{item.ano}}</p>  
-        <div class="well">
-          <ul class="list-group checked-list-box" *ngFor="let musica of item.musicas" >
-            <li class="list-group-item">{{musica}}</li>
+    <hr />
+
+    <button type="button" (click)="clear()" pButton icon="fa-close" label="Clear"></button>
+  </div>-->
+
+  <div>
+    <h3>Customized - ({{checked2}})</h3>
+    <p-toggleButton [(ngModel)]="checked2" onLabel="I confirm" offLabel="I reject" onIcon="fa-check-square" offIcon="fa-square" [style]="{'width':'150px'}"></p-toggleButton>
+  </div>
+
+  <div>
+    <pre class="card card-block card-header">Model: {{asyncSelected | json}}</pre>
+    <input [(ngModel)]="asyncSelected"
+          [typeahead]="dataSource"
+          (typeaheadLoading)="changeTypeaheadLoading($event)"
+          (typeaheadNoResults)="changeTypeaheadNoResults($event)"
+          (typeaheadOnSelect)="typeaheadOnSelect($event)"
+          typeaheadOptionsLimit="7"
+          typeaheadOptionField="artista"
+          placeholder="Selecione um artista"
+          class="form-control">
+    <div *ngIf="typeaheadLoading===true">
+      <i class="glyphicon glyphicon-refresh ng-hide" style=""></i>
+    </div>
+    <div *ngIf="typeaheadNoResults===true" class="" style="">
+      <i class="glyphicon glyphicon-remove"></i> No Results Found
+    </div>
+  </div>
+
+  <div id="albuns" class="container">
+    <div class="row">
+
+      <div class="album" *ngFor="let item of listaMusicas">
+        <div class="col-md-2"><img src="{{item.imagem}}" class="img-responsive center-block"></div> 
+        <div class="col-sm-4">
+          <h2 class="titulo-album">{{item.titulo}}</h2>
+          <h3 class="subtitulo-album">{{item.ano}}</h3>
+          <p class="texto-album">Henrique e Juliano</p>  
+          <div class="well">
+            <ul class="list-group checked-list-box" *ngFor="let musica of item.musicas" >
+              <li class="list-group-item">{{musica}}
+                <span class="badge">{{votos()}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
             
-          </ul>
-        </div>
-      </div>
-
-      <!--<div class="col-md-2"><img src="../../assets/img/HeJ-Novas-Historias.jpg" class="img-responsive center-block"></div> 
-      <div class="col-sm-4">
-        <h2 class="titulo-album">TITULO</h2>
-        <h3 class="subtitulo-album">Henrique e Juliano</h3>
-        <p class="texto-album">Nullam sapien massa, aliquam in cursus ut, ullamcorper in tortor. 
-          Aliquam mauris arcu, tristique a lobortis vitae, condimentum feugiat justo.</p>  
-
-        <div class="well">
-          <ul class="list-group checked-list-box">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item" data-checked="true">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-md-2 "><img src="//placehold.it/165x165" class="img-responsive center-block"></div> 
-      <div class="col-md-4">
-        <h2 class="titulo-album">TITULO</h2>
-        <h3 class="subtitulo-album">Henrique e Juliano</h3>
-        <p class="texto-album">Nullam sapien massa, aliquam in cursus ut, ullamcorper in tortor. 
-          Aliquam mauris arcu, tristique a lobortis vitae, condimentum feugiat justo.</p>  
-
-        <div class="well">
-          <ul class="list-group checked-list-box">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item" data-checked="true">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-      </div>-->
-      
     </div> 
   </div>
 
 
-  <br><br><br><br><br>
+  <br><br><br>
 
   <!-- Footer -->
   <footer class="text-center">
