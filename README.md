@@ -48,6 +48,12 @@ Para o desenvolvimento do projeto serão utilizadas ferramentas para auxiliar na
 >* `npm install`
 >* `npm install -g @angular/cli`
 
+**Dependências:**
+>* `npm install ngx-bootstrap --save`
+>* `npm install primeng --save`
+>* `npm install @angular/animations`
+>* `npm install font-awesome`
+
 **Caso o ambiente já esteja configurado:**
 >* Clone o projeto através do GitKraken, copie e cole o link HTTPS;
 >* Ou [Clonando pela linha de comando](#clonando-projeto-pela-linha-de-comando);

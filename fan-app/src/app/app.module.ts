@@ -13,6 +13,7 @@ import {AccordionModule} from 'primeng/components/accordion/accordion';
 import {MenuItem} from 'primeng/components/common/api';
 import {SelectButtonModule} from 'primeng/primeng';
 import {ToggleButtonModule} from 'primeng/primeng';
+import {CheckboxModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -42,6 +43,7 @@ import { MusicasComponent } from './musicas/musicas.component';
     AccordionModule,
     SelectButtonModule,
     ToggleButtonModule,
+    CheckboxModule,
     RouterModule.forRoot([
       {
         path: '',

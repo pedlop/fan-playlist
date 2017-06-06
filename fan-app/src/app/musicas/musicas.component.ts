@@ -9,6 +9,7 @@ import { TypeaheadMatch } from 'ngx-bootstrap/typeahead';
 import {SelectItem} from 'primeng/primeng';
 import {SelectButtonModule} from 'primeng/primeng';
 import {ButtonModule} from 'primeng/primeng';
+import {ListboxModule} from 'primeng/primeng';
 
 @Component({
   selector: 'app-musicas',
@@ -17,6 +18,12 @@ import {ButtonModule} from 'primeng/primeng';
 })
 export class MusicasComponent implements OnInit {
 
+
+    selectedCities: string[] = [];
+
+    selectedCategories: string[] = ['Technology', 'Sports'];
+
+    checked: boolean = false;
   checked2: boolean = false;
 
   //public listaMusicas : Discografia[];
@@ -58,14 +65,24 @@ export class MusicasComponent implements OnInit {
         "imagem" : "../../assets/img/Henrique-e-Juliano-O-Céu-Explica-Tudo.jpg",
         "musicas" : [
           "Não Passa Vontade",
+          "Meu Amor",
+          "De Trás Pra Frente",
           "Vidinha de Balada",
           "O Céu Explica Tudo",
-          "De trás pra frente",
           "Aquela pessoa",
-          "5KM",
-          "Vem pra minha vida",
+          "Modo Sofrimento",
+          "Bebida com Saudade",
+          "Maquiagem Não Disfarça",
           "Tinta de Amor",
-          "Mais Amor e Menos Drama"
+          "Faz do Seu Jeito",
+          "Na Boa",
+          "Zé Ruela",
+          "Vem Pra Minha Vida",
+          "5KM",
+          "Mais Amor e Menos Drama",
+          "Amor Não é Só Love",
+          "3 Horas de Motel",
+          "Esse Filho é Meu"
         ]
       },
       {
