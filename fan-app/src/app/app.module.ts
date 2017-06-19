@@ -14,6 +14,7 @@ import {MenuItem} from 'primeng/components/common/api';
 import {SelectButtonModule} from 'primeng/primeng';
 import {ToggleButtonModule} from 'primeng/primeng';
 import {CheckboxModule} from 'primeng/primeng';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -44,6 +45,7 @@ import { MusicasComponent } from './musicas/musicas.component';
     SelectButtonModule,
     ToggleButtonModule,
     CheckboxModule,
+    ChartsModule,
     RouterModule.forRoot([
       {
         path: '',
