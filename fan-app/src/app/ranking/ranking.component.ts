@@ -17,7 +17,7 @@ export class RankingComponent {
             {
                 colocacao:1,
                 musica:'Vidinha de Balada',
-                album:'Vidinha de Balada',
+                album:'O Céu Explica Tudo',
                 artista:'Henrique e Juliano',
                 fotoArtista:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg',
                 fotoAlbum:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg'
@@ -25,7 +25,7 @@ export class RankingComponent {
             {
                 colocacao:2,
                 musica:'Vidinha de Balada',
-                album:'Vidinha de Balada',
+                album:'O Céu Explica Tudo',
                 artista:'Henrique e Juliano',
                 fotoArtista:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg',
                 fotoAlbum:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg'
@@ -33,7 +33,7 @@ export class RankingComponent {
             {
                 colocacao:3,
                 musica:'Vidinha de Balada',
-                album:'Vidinha de Balada',
+                album:'O Céu Explica Tudo',
                 artista:'Henrique e Juliano',
                 fotoArtista:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg',
                 fotoAlbum:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg'
@@ -41,7 +41,7 @@ export class RankingComponent {
             {
                 colocacao:4,
                 musica:'Vidinha de Balada',
-                album:'Vidinha de Balada',
+                album:'O Céu Explica Tudo',
                 artista:'Henrique e Juliano',
                 fotoArtista:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg',
                 fotoAlbum:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg'
@@ -49,7 +49,7 @@ export class RankingComponent {
             {
                 colocacao:5,
                 musica:'Vidinha de Balada',
-                album:'Vidinha de Balada',
+                album:'O Céu Explica Tudo',
                 artista:'Henrique e Juliano',
                 fotoArtista:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg',
                 fotoAlbum:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg'
@@ -57,7 +57,7 @@ export class RankingComponent {
             {
                 colocacao:6,
                 musica:'Vidinha de Balada',
-                album:'Vidinha de Balada',
+                album:'O Céu Explica Tudo',
                 artista:'Henrique e Juliano',
                 fotoArtista:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg',
                 fotoAlbum:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg'
@@ -65,7 +65,7 @@ export class RankingComponent {
             {
                 colocacao:7,
                 musica:'Vidinha de Balada',
-                album:'Vidinha de Balada',
+                album:'O Céu Explica Tudo',
                 artista:'Henrique e Juliano',
                 fotoArtista:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg',
                 fotoAlbum:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg'
@@ -73,7 +73,7 @@ export class RankingComponent {
             {
                 colocacao:8,
                 musica:'Vidinha de Balada',
-                album:'Vidinha de Balada',
+                album:'O Céu Explica Tudo',
                 artista:'Henrique e Juliano',
                 fotoArtista:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg',
                 fotoAlbum:'https://s2.vagalume.com/henrique-e-juliano/images/henrique-e-juliano.jpg'
