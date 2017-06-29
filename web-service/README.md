@@ -8,7 +8,7 @@ Neste projeto usaremos as seguintes tecnlogias.:
 
  - Linguagem de Programação & Frameworks:
 	 - Java: https://www.oracle.com/java/index.html
-	 - Spark: http://sparkjava.com/
+	 - SpringBoot: https://projects.spring.io/spring-boot/
 	 - Spring Data: http://projects.spring.io/spring-data/
 	 - Hibernate: http://hibernate.org/
 	 - JUnit: http://junit.org/junit4/
