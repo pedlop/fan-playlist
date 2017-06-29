@@ -26,7 +26,7 @@ Para o desenvolvimento do projeto serão utilizadas ferramentas para auxiliar na
 - [Maven](https://maven.apache.org/) - _Ferramenta de gerenciamento e compreensão de projetos de software. Com base no conceito de um modelo de objeto de projeto (POM), o Maven pode gerenciar a compilação, relatórios e documentação de um projeto a partir de uma peça central de informação._
 
 **Banco de Dados:**
-- [MongoDB](https://www.mongodb.com/) - _Programa de banco de dados orientado a documentos multi-plataforma livre e de código aberto. Classificada como um programa de banco de dados NoSQL, o MongoDB usa documentos semelhantes a JSON com esquemas._
+- [PostgreSQL](https://www.postgresql.org/) - _Banco de dados relacional, porém a partir das versão 9.5 incluiu o tipo JSON e possui linguagem própia para consultas no tipo não estruturado. _
 
 **IDE(s):**
 - [IntelliJ](https://www.jetbrains.com/idea/) - _Ambiente de desenvolvimento integrado Java (IDE) para o desenvolvimento de software de computador._
