@@ -98,7 +98,13 @@ public class Usuario extends Entidade implements UserDetails {
         u.tipoUsuario = TipoUsuario.ADMIN;
         return u;
     }
-
+    
+    public Usuario autualizarUsuario(Usuario u, String email, String senha) {
+        Usuario novoUsuario = new Usuario(email, senha);
+        novoUsuario.tipoUsuario = u.tipoUsuario;
+        novoUsuario.id = u.id;
+        return novoUsuario;
+    }
     /**
      * 
      * @return Email associada ao login.

@@ -22,12 +22,23 @@ public class UsuarioDTO extends ExcecaoNegocio implements PadraoRetorno<Usuario>
      * Campos do usuario.
      */
     
+    private Long id;
+    
     private String email;
     
     private String senha;
 
     private TipoUsuario tipoUsuario;
     
+    public Long getId() {
+        return id;
+    }
+
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -82,6 +93,7 @@ public class UsuarioDTO extends ExcecaoNegocio implements PadraoRetorno<Usuario>
      */
     static public UsuarioDTO converteDominioDto(Usuario dominio) {
         UsuarioDTO u = new UsuarioDTO();
+            u.id = dominio.getId();
             u.email = dominio.getEmail();
             u.tipoUsuario = dominio.getTipoUsuario();
         return u;

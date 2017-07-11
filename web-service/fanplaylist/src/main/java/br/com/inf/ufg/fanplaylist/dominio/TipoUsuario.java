@@ -19,7 +19,12 @@ public enum TipoUsuario {
     /**
      * Usúario com nível de acesso de administrador.
      */
-    ADMIN("2");
+    ADMIN("2"),
+    
+    /**
+     * Usúario com que correponde a própia aplicação
+     */
+    APP("3");
     
     /**Guarda valor ordinal das constantes.*/
     private String tipoUsuario;
@@ -41,4 +46,6 @@ public enum TipoUsuario {
     public static final String USUARIO_S = "ROLE_1";
     
     public static final String ADMIN_S = "ROLE_2";
+    
+    public static final String APP_S = "ROLE_3";
 }

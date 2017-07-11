@@ -17,7 +17,7 @@ public abstract class Entidade {
     
     @Id
     @GeneratedValue
-    private Long id;
+    protected Long id;
     
     /**
      * Construtor padrão para entidades mapeadas
