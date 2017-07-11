@@ -58,7 +58,7 @@ public class Usuario extends Entidade implements UserDetails {
     /**
      * Senha para acesso da conta.
      */
-    @Column(length = ConstanteString.TEXTO30)
+    @Column(columnDefinition = "text")
     @ValidadorString(
             aceitaNulo = false,
             codigoErro = NumeroErro.ERRO_20,
@@ -73,6 +73,11 @@ public class Usuario extends Entidade implements UserDetails {
     @Enumerated(EnumType.STRING)
     @Column
     private TipoUsuario tipoUsuario;
+    
+    /**
+     * Default constructor entity.
+     */
+    public Usuario(){}
 
 
     /**
@@ -83,7 +88,8 @@ public class Usuario extends Entidade implements UserDetails {
     public Usuario(String email, String senha) {
         super();
         this.email = email;
-        this.senha = senha;
+        //CRIPTGRAFA A SENHA DO USUARIO
+        this.senha = UtilCriptografa.criptografa(senha);
         this.tipoUsuario = TipoUsuario.USUARIO;
     }
     
@@ -93,9 +99,21 @@ public class Usuario extends Entidade implements UserDetails {
      * @param senha - Senha do usúario admin.
      * @return Login de usúario do tipo ADMIN.
      */
-    public Usuario criaAdmin(String email, String senha) {
+    public static Usuario criaAdmin(String email, String senha) {
         Usuario u = new Usuario(email, senha);
         u.tipoUsuario = TipoUsuario.ADMIN;
+        return u;
+    }
+
+    /**
+     * 
+     * @param email - Email do usúario admin.
+     * @param senha - Senha do usúario admin.
+     * @return Login de usúario do tipo ADMIN.
+     */
+    public static Usuario criaApp(String email, String senha) {
+        Usuario u = new Usuario(email, senha);
+        u.tipoUsuario = TipoUsuario.APP;
         return u;
     }
     

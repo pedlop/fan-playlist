@@ -26,9 +26,20 @@ import br.com.inf.ufg.fanplaylist.util.UtilValidador;
 @RestController
 public class ControllerUsuario {
     
-    @Autowired
     private IUsuarioRepositorio iUsuarioRepositorio;
     
+    @Autowired
+    public ControllerUsuario(IUsuarioRepositorio iUsuarioRepositorio) {
+        
+        /**
+         * Cria usuario padrao de uso da aplicação.
+         */
+        if (!iUsuarioRepositorio.findByEmail("fanplaylist.com").isPresent()) {
+            Usuario usuario = Usuario.criaApp("fanplaylist.com", "CE&atutu2a-r");
+            iUsuarioRepositorio.save(usuario);
+        }
+        
+    }
     
     @Secured({
         TipoUsuario.ADMIN_S,
