@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private webService: WebService, public router: Router) {
     this.controller = new ControllerLogin();
-    this.controller.setFormCdsClienteComponent(this, this.webService);
+    this.controller.setFormCdsClienteComponent(this, this.webService,this.router);
   }
 
   ngOnInit() {
@@ -33,14 +33,15 @@ export class LoginComponent implements OnInit {
     if (this.controller.tokenSincronizacaoOK) {
       this.webService.pegarTokenSincronizacao(true).subscribe((rest) => {
         this.controller.tokenSincronizacaoOK = false;
-        this.controller.setFormCdsClienteComponent(this, this.webService);
+        this.controller.setFormCdsClienteComponent(this, this.webService,this.router);
         this.webService.requisicaoPost(true,
-            Endereco.CADASTRAR_USUARIO, rest.text(),
+            Endereco.LOGIN_USUARIO, rest.text(),
             this.usuarioDTO, this.controller);
       },
-        (erro: any) => {
+      (erro: any) => {
           this.controller.tokenSincronizacaoOK = true;
-        });
+          alert('Erro ao pegar o token de sincronização!');
+      });
     }
   }
 
@@ -50,20 +51,24 @@ class ControllerLogin extends Controller {
   public tokenSincronizacaoOK = true;
   private component: LoginComponent;
   private webservice : WebService;
+  public router : Router;
 
-  setFormCdsClienteComponent(f: LoginComponent,webservice : WebService) {
+  setFormCdsClienteComponent(f: LoginComponent,webservice : WebService, router : Router) {
     this.component = f;
     this.webservice = webservice;
+    this.router = router;
   }
 
   casoErroRede(): void {
     this.tokenSincronizacaoOK = true;
+    alert('Erro de Rede!');
   }
 
   casoErroNegocio(): void {
     const erro: ExcecaoNegocio = JSON.parse(this.response.text());
     this.tokenSincronizacaoOK = true;
     console.log('ERRO DE NEGOCIO. ' + erro.codigoErro + '/' + erro.nomeClasse + '/' + erro.controller);
+    alert('ERRO DE NEGOCIO. ' + erro.codigoErro + '/' + erro.nomeClasse + '/' + erro.controller);
   }
 
   casoComunicacaoCompleta(): void {
@@ -71,5 +76,6 @@ class ControllerLogin extends Controller {
     /*Guarda o token de seguranca do usuario na memoria.*/
     localStorage.setItem(DnsWebService.storageTokenUsuario,
     this.response.text());
+    this.router.navigate([''])
   }
 }

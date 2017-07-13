@@ -1,8 +1,9 @@
 <br>
 <br>
+<br>
 
 <div>
-  <pre class="card card-block card-header">Model: {{asyncSelected | json}}</pre>
+  <pre class="card card-block card-header">Cantores Selecionados: {{asyncSelected | json}}</pre>
     <input [(ngModel)]="asyncSelected"
         [typeahead]="dataSource"
         (typeaheadLoading)="changeTypeaheadLoading($event)"
@@ -23,7 +24,7 @@
 <br>
 
 <div style="padding-left:30px;">
-  Musicas Selecionadas: <span *ngFor="let music of selectedCategories" style="margin-right:10px">{{music}}</span>
+  Músicas Selecionadas: <span *ngFor="let music of selectedCategories" style="margin-right:10px">{{music}}</span>
 </div>
 
   <div id="albuns" class="container">
@@ -36,11 +37,18 @@
           <h3 class="subtitulo-album">{{item.ano}}</h3>
           <p class="texto-album">Henrique e Juliano</p>
 
-          <div class="well">
+          <div *ngIf="usuarioLogado" class="well">
             <ul ul id="check-list-box" class="list-group checked-list-box" *ngFor="let musica of item.musicas" > 
               <li class="list-group-item">
-                <p-checkbox name="grupo" value="{{musica}}" label="{{musica}}" [(ngModel)]="selectedCategories"></p-checkbox> 
+                <p-checkbox name="grupo"  value="{{musica}}" label="{{musica}}" [(ngModel)]="selectedCategories"></p-checkbox> 
                 <!--<span class="badge" >{{votos()}}</span>-->
+              </li>
+            </ul>
+          </div>
+          <div class="well" *ngIf="!usuarioLogado">
+            <ul ul id="check-list-box" class="list-group checked-list-box" > 
+              <li class="list-group-item">
+                <p>Você precisa realizar login para votar!s</p>
               </li>
             </ul>
           </div>

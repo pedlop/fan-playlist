@@ -20,11 +20,14 @@ export class MusicasComponent implements OnInit {
   checked: boolean = false;
   checked2: boolean = false;
 
+  public usuarioLogado:boolean = false;
+
   //public listaMusicas : Discografia[];
   public discografiaCantor : string[];
   private url : string = "../../assets/led/hej-discografia.json";
 
   public listaMusicas: Array<Discografia> = new Array<Discografia>();
+  public listaMusicasSelecionadas : number = 0;
 
   public asyncSelected: string;
   public typeaheadLoading: boolean;
@@ -131,6 +134,15 @@ export class MusicasComponent implements OnInit {
           ]
         })
   
+        
+  }
+
+  ngOnInit(){
+    let usuario = localStorage.getItem('UserEmail');
+    if(usuario==='undefined')
+      this.usuarioLogado = false;
+    else
+      this.usuarioLogado = true;
   }
 
   public getStatesAsObservable(token: string): Observable<any> {
@@ -169,9 +181,7 @@ export class MusicasComponent implements OnInit {
 
   handleChange(e) {
         var isChecked = e.checked;
-    }
-
-  ngOnInit() {
   }
+
 
 }
