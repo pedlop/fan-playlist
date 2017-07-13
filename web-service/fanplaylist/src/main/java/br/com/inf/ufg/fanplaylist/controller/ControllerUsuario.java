@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,7 +39,7 @@ public class ControllerUsuario {
             Usuario usuario = Usuario.criaApp("fanplaylist.com", "CE&atutu2a-r");
             iUsuarioRepositorio.save(usuario);
         }
-        
+        this.iUsuarioRepositorio = iUsuarioRepositorio;
     }
     
     @Secured({
@@ -47,12 +48,12 @@ public class ControllerUsuario {
     })
     @RequestMapping(method = RequestMethod.POST,
     value = "/ControllerUsuario/salvarUsuario")
-    public UsuarioDTO salvarUsuario(UsuarioDTO usuarioDTO) {
+    public UsuarioDTO salvarUsuario(@RequestBody UsuarioDTO usuarioDTO) {
         try {
             Usuario usuario = new Usuario(usuarioDTO.getEmail(),
                     usuarioDTO.getSenha());
-            iUsuarioRepositorio.save(usuario);
             UtilValidador.validaObjetos(usuario);
+            iUsuarioRepositorio.save(usuario);
             return usuarioDTO;
         } catch (ExcecaoNegocio e) {
             return new UsuarioDTO(e, "ControllerUsuario");
@@ -65,7 +66,7 @@ public class ControllerUsuario {
     })
     @RequestMapping(method = RequestMethod.POST,
     value = "/ControllerUsuario/atualizarUsuario")
-    public UsuarioDTO atualizarUsuario(UsuarioDTO usuarioDTO) {
+    public UsuarioDTO atualizarUsuario(@RequestBody UsuarioDTO usuarioDTO) {
         try {
             Optional<Usuario> opUsuario = iUsuarioRepositorio.findById(usuarioDTO.getId());
             //CASO NAO ENCONTRE USUARIO NAO LANCA EXCECAO
@@ -84,7 +85,7 @@ public class ControllerUsuario {
     @Secured({ TipoUsuario.ADMIN_S, TipoUsuario.APP_S })
     @RequestMapping(method = RequestMethod.POST,
             value = "/ControllerUsuario/deletarUsuario")
-    public UsuarioDTO detetarUsuario(UsuarioDTO usuarioDTO) {
+    public UsuarioDTO detetarUsuario(@RequestBody UsuarioDTO usuarioDTO) {
         Optional<Usuario> opUsuario = iUsuarioRepositorio
                 .findById(usuarioDTO.getId());
         // CASO NAO ENCONTRE USUARIO NAO LANCA EXCECAO
