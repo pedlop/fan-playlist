@@ -12,10 +12,6 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
 import {AccordionModule} from 'primeng/components/accordion/accordion';
 import {MenuItem} from 'primeng/components/common/api';
-import {SelectButtonModule} from 'primeng/primeng';
-import {ToggleButtonModule} from 'primeng/primeng';
-import {CheckboxModule} from 'primeng/primeng';
-import { ChartsModule } from 'ng2-charts';
 
 import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
@@ -37,10 +33,6 @@ import { rotaPrincipal } from './app.routes';
     CollapseModule.forRoot(),
     TypeaheadModule.forRoot(),
     AccordionModule,
-    SelectButtonModule,
-    ToggleButtonModule,
-    CheckboxModule,
-    ChartsModule,
     HomeModule,
     RouterModule.forRoot(rotaPrincipal)
   ],
