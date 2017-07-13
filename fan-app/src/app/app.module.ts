@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 import { Routes } from '@angular/router';
+
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
@@ -15,8 +16,10 @@ import {SelectButtonModule} from 'primeng/primeng';
 import {ToggleButtonModule} from 'primeng/primeng';
 import {CheckboxModule} from 'primeng/primeng';
 import { ChartsModule } from 'ng2-charts';
+
 import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { HomeRoutes } from './home/index';
 /** ROTA PRINCIPAL.*/
 import { rotaPrincipal } from './app.routes';

@@ -32,10 +32,10 @@
     <p-checkbox [(ngModel)]="checked" binary="true"></p-checkbox>
   </div>-->
  
-  <div>
+  <!--<div>
     <h3>Customized - ({{checked2}})</h3>
-    <!-- <p-toggleButton [(ngModel)]="checked2" onLabel="I confirm" offLabel="I reject" onIcon="fa-heart" offIcon="fa-heart-o" [style]="{'width':'150px', 'height':'50px'}"></p-toggleButton> -->
-  </div>
+     <p-toggleButton [(ngModel)]="checked2" onLabel="I confirm" offLabel="I reject" onIcon="fa-heart" offIcon="fa-heart-o" [style]="{'width':'150px', 'height':'50px'}"></p-toggleButton> 
+  </div>-->
 
   <div>
     <pre class="card card-block card-header">Model: {{asyncSelected | json}}</pre>
@@ -56,6 +56,32 @@
     </div>
   </div>
 
+  <div>
+    <h3>Advanced (Multiple, Checkbox and Filter)</h3>
+    <p-listbox [options]="musics" [(ngModel)]="selectedMusics" multiple="multiple" checkbox="checkbox" filter="filter"></p-listbox>
+    <p>Selected Cities: <span *ngFor="let item of selectedMusics" style="margin-right: 10px">{{item}}</span></p>
+    <p>Selected Car: {{selectedCar}}</p>
+  
+
+  <button type="button" (click)="selectedMusics=null" pButton icon="fa-close" label="Clear Selected Car">Zerar Musicas</button>
+    <p-multiSelect [options]="musics" [(ngModel)]="selectedMusics"></p-multiSelect>
+
+</div>
+
+<div>
+  <h3>Content</h3>
+<p-listbox [options]="cars" [(ngModel)]="selectedCar" multiple="multiple" [style]="{'width':'190px','max-height':'250px'}">
+    <ng-template let-car pTemplate="item">
+        <div class="ui-helper-clearfix">
+            <span style="font-size:20px;float:right;margin:15px 10px 0 0">{{car.value}}</span>
+        </div>
+    </ng-template>
+</p-listbox>
+<p>Selected Car: {{selectedCar}}</p>
+
+<button type="button" (click)="selectedCar=null" pButton icon="fa-close" label="Clear Selected Car"></button>
+</div>
+
   <div id="albuns" class="container">
     <div class="row">
 
@@ -64,19 +90,29 @@
         <div class="col-sm-4">
           <h2 class="titulo-album">{{item.titulo}}</h2>
           <h3 class="subtitulo-album">{{item.ano}}</h3>
-          <p class="texto-album">Henrique e Juliano</p>  
+          <p class="texto-album">Henrique e Juliano</p>
+          <!--<div *ngFor="let musica of item.musicas" > -->
+          <!--<select multiple class="form-control" >
+            <option *ngFor="let musica of item.musicas">{{musica}}</option>
+          </select>-->
+          
+            <!--<p-listbox [options]="musics" 
+            [(ngModel)]="selectedMusics" 
+            multiple="multiple" 
+            checkbox="checkbox" 
+            filter="filter"></p-listbox>-->
+
           <div class="well">
-            <ul class="list-group checked-list-box" *ngFor="let musica of item.musicas" > 
+            <ul ul id="check-list-box" class="list-group checked-list-box" *ngFor="let musica of item.musicas" > 
               <li class="list-group-item">
-                <!--<p-checkbox [(ngModel)]="checked" binary="true"></p-checkbox>-->
-                <!--<p-toggleButton [(ngModel)]="checked2" onLabel="I confirm" offLabel="I reject" onIcon="fa-check-square" offIcon="fa-square"></p-toggleButton>-->
                 {{musica}}
                 <span class="badge" >{{votos()}}</span>
               </li>
             </ul>
           </div>
-        </div>
+
+        <!--</div>-->
       </div>
-            
+      </div>
     </div> 
   </div>

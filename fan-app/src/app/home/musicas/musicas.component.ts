@@ -9,7 +9,6 @@ import { TypeaheadMatch } from 'ngx-bootstrap/typeahead';
 import {SelectItem} from 'primeng/primeng';
 import {SelectButtonModule} from 'primeng/primeng';
 import {ButtonModule} from 'primeng/primeng';
-import {ListboxModule} from 'primeng/primeng';
 
 @Component({
   selector: 'app-musicas',
@@ -18,18 +17,27 @@ import {ListboxModule} from 'primeng/primeng';
 })
 export class MusicasComponent implements OnInit {
 
+  cities: SelectItem[];
 
-    selectedCities: string[] = [];
+  selectedCity: string;
 
-    selectedCategories: string[] = ['Technology', 'Sports'];
+  selectedCities: string[];
 
-    checked: boolean = false;
+  cars: SelectItem[];
+  selectedCar: string;
+
+
+  selectedCategories: string[] = ['Technology', 'Sports'];
+
+  checked: boolean = false;
   checked2: boolean = false;
 
   //public listaMusicas : Discografia[];
   public discografiaCantor : string[];
   private url : string = "../../assets/led/hej-discografia.json";
 
+  musics: SelectItem[];
+  selectedMusic: string;
   public listaMusicas: Array<Discografia> = new Array<Discografia>();
 
   public asyncSelected: string;
@@ -57,6 +65,35 @@ export class MusicasComponent implements OnInit {
         observer.next(this.asyncSelected);
       })
       .mergeMap((token: string) => this.getStatesAsObservable(token));
+
+      this.cities = [];
+        this.cities.push({label:'New York', value:'New York'});
+        this.cities.push({label:'Rome', value:'Rome'});
+        this.cities.push({label:'London', value:'London'});
+        this.cities.push({label:'Istanbul', value:'Istanbul'});
+        this.cities.push({label:'Paris', value:'Paris'});
+
+      this.cars = [];
+        this.cars.push({label: 'Audi', value: 'Audi'});
+        this.cars.push({label: 'BMW', value: 'BMW'});
+        this.cars.push({label: 'Fiat', value: 'Fiat'});
+        this.cars.push({label: 'Ford', value: 'Ford'});
+        this.cars.push({label: 'Honda', value: 'Honda'});
+        this.cars.push({label: 'Jaguar', value: 'Jaguar'});
+        this.cars.push({label: 'Mercedes', value: 'Mercedes'});
+        this.cars.push({label: 'Renault', value: 'Renault'});
+        this.cars.push({label: 'VW', value: 'VW'});
+        this.cars.push({label: 'Volvo', value: 'Volvo'});
+
+      this.musics = [];
+      this.musics.push({label: 'Não Passa Vontade', value: 'Não Passa Vontade'});
+      this.musics.push({label: 'Meu Amor', value: 'Meu Amor'});
+      this.musics.push({label: 'De Trás Pra Frente', value: 'De Trás Pra Frente'});
+      this.musics.push({label: 'Vidinha de Balada', value: 'Vidinha de Balada'});
+      this.musics.push({label: 'O Céu Explica Tudo', value: 'O Céu Explica Tudo'});
+      this.musics.push({label: 'Aquela pessoa', value: 'Aquela pessoa'});
+      this.musics.push({label: 'Modo Sofrimento', value: 'Modo Sofrimento'});
+      this.musics.push({label: 'Bebida com Saudade', value: 'Bebida com Saudade'});
 
     this.listaMusicas.push(
       { 
