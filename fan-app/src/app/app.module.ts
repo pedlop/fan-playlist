@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
-
+import { Routes } from '@angular/router';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
@@ -15,23 +15,15 @@ import {SelectButtonModule} from 'primeng/primeng';
 import {ToggleButtonModule} from 'primeng/primeng';
 import {CheckboxModule} from 'primeng/primeng';
 import { ChartsModule } from 'ng2-charts';
-
+import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { RegistrarComponent } from './registrar/registrar.component';
-import { RankingComponent } from './ranking/ranking.component';
-import { MusicasComponent } from './musicas/musicas.component';
-
+import { HomeRoutes } from './home/index';
+/** ROTA PRINCIPAL.*/
+import { rotaPrincipal } from './app.routes';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent,
-    HomeComponent,
-    RegistrarComponent,
-    RankingComponent,
-    MusicasComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -46,30 +38,12 @@ import { MusicasComponent } from './musicas/musicas.component';
     ToggleButtonModule,
     CheckboxModule,
     ChartsModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: HomeComponent
-      },
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: 'registrar',
-        component: RegistrarComponent
-      },
-      {
-        path: 'ranking',
-        component: RankingComponent
-      },
-      {
-        path: 'musicas',
-        component: MusicasComponent
-      }
-    ])
+    HomeModule,
+    RouterModule.forRoot(rotaPrincipal)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

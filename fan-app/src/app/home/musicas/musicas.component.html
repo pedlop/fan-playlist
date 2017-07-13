@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <!-- Template feito pelo www.w3schools.com - Site desenvolvido pela equipe ASBuilT -->
-  <title>FanPlaylist</title>
-  <meta charset="utf-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/omega/theme.css" />
-  <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
-  <link rel="stylesheet" type="text/css" href="/node_modules/font-awesome/css/font-awesome.min.css" />
-
-</head>
-<body>
-
-  <!--<div>    
+<!--<div>    
     <h3>Multiple</h3>
     <p-selectButton [options]="types" [(ngModel)]="selectedTypes" multiple="multiple"></p-selectButton>
     <p>Selected Types: <span *ngFor="let type of selectedTypes">{{type}} </span></p>
@@ -55,12 +34,12 @@
  
   <div>
     <h3>Customized - ({{checked2}})</h3>
-    <p-toggleButton [(ngModel)]="checked2" onLabel="I confirm" offLabel="I reject" onIcon="fa-heart" offIcon="fa-heart-o" [style]="{'width':'150px', 'height':'50px'}"></p-toggleButton>
+    <!-- <p-toggleButton [(ngModel)]="checked2" onLabel="I confirm" offLabel="I reject" onIcon="fa-heart" offIcon="fa-heart-o" [style]="{'width':'150px', 'height':'50px'}"></p-toggleButton> -->
   </div>
 
   <div>
     <pre class="card card-block card-header">Model: {{asyncSelected | json}}</pre>
-    <input [(ngModel)]="asyncSelected"
+    <!-- <input [(ngModel)]="asyncSelected"
           [typeahead]="dataSource"
           (typeaheadLoading)="changeTypeaheadLoading($event)"
           (typeaheadNoResults)="changeTypeaheadNoResults($event)"
@@ -68,7 +47,7 @@
           typeaheadOptionsLimit="7"
           typeaheadOptionField="artista"
           placeholder="Selecione um artista"
-          class="form-control">
+          class="form-control"> -->
     <div *ngIf="typeaheadLoading===true">
       <i class="glyphicon glyphicon-refresh ng-hide" style=""></i>
     </div>
@@ -101,18 +80,3 @@
             
     </div> 
   </div>
-
-
-  <br><br><br>
-
-  <!-- Footer -->
-  <footer class="text-center">
-    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-      <span class="glyphicon glyphicon-chevron-up"></span>
-    </a><br><br>
-      <p>Website desenvolvido no repositório <a href="https://github.com/pedlop/fan-playlist" data-toggle="tooltip" title="Visite pedlop/fan-playlist">github.com/pedlop/fan-playlist</a></p>
-      <p>Projeto criado e versão mobile futuramente disponiblizada pela equipe <a href="https://bitbucket.org/asbuilt/" ><b>ASBuilT</b></a></p>
-      <p>© 2017 FanPlaylist. Todos os direitos reservados. <u><a href="https://github.com/pedlop">  Pedro Lopes</a></u></p>
-  </footer>
-
-</body>

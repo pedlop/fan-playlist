@@ -1,0 +1,541 @@
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel"> 
+     
+  <!-- Wrapper for slides --> 
+  <div class="carousel-inner" role="listbox"> 
+    <carousel> 
+      <slide> 
+        <img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="First slide"> 
+        <div class="carousel-caption"> 
+          <h3>Estamos em sua Cidade</h3> 
+          <p>A atmosfera dos shows invade seus dispositivos móveis.</p> 
+        </div> 
+      </slide> 
+      <slide> 
+        <img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="Second slide" width="100%"> 
+        <div class="carousel-caption"> 
+          <h3>Second slide label</h3> 
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+        </div> 
++
+      </slide> 
+      <slide> 
+        <img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="Third slide"> 
+        <div class="carousel-caption"> 
+          <h3>Third slide label</h3> 
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> 
+        </div> 
+      </slide> 
+    </carousel> 
+  </div> 
+</div> 
+ 
+<!-- Container (Equipe Section) --> 
+<div id="equipe" class="container text-center"> 
+  <h3>A EQUIPE ASBUILT</h3> 
+  <p><em>Desenvolvendo Aplicações!</em></p> 
+  <p>ASBuilT - Application and Systems Builder Team.</p> 
+  <p>A ideia de ter uma equipe para desenvolvimento de aplicações, tanto web quanto mobile, teve início após a realização de diversos trabalhos pelos integrantes da equipe, juntamente com a  
+    ideia que um de nossos membros teve quanto ao desenvolvimento de uma aplicação relacionada a Shows de Músicas, logo veio também a criação do nome da equipe que iria desenvolvê-la. 
+    Todos os membros estão no 7º período do curso de Engenharia de Software pela Universidade Federal de Goiás. A criação de um website desta aplicação veio com a necessidade de construir uma 
+    ferramenta web para a disciplina Desenvolvimento de Software para Web 2017/1, ministrada pelo professor Walison Moreira. Toda a documentação está disponível apenas para os membros da equipe 
+    na solução Git conhecida com Bitbucket. O repositório deste website pode ser encontrado no Github em <a href="http://www.github.com/pedlop/fan-playlist">FanPlaylist</a>. 
+  </p> 
+  <br> 
+  <div class="row"> 
+    <div class="col-sm-3"> 
+      <p class="text-center"><strong>Pedro Victor</strong></p> 
+      <a  href="#demo" (click)="abreInfo = !abreInfo"> 
+        <img src="https://lh3.googleusercontent.com/-YViV3lbb0QU/WHv73JYuy0I/AAAAAAAAFQ4/WxGPNE1WdYI_ZNvlb2Bm6gUfx5bd28whQCEw/w140-h140-p/IMG_3949.JPG" class="img-circle person" alt="Random Name" width="255" height="255"> 
+      </a> 
+      <div class="collapse" [collapse]="!abreInfo"> 
+        <p>Estudante de Engenharia de Software - UFG</p> 
+        <p>Gerente de Configuração/Projeto e Desenvolvedor Full-Stack</p> 
+        <p>Cursando 7º período</p> 
+      </div> 
+    </div> 
+    <div class="col-sm-3"> 
+      <p class="text-center"><strong>Lucas Vinicios</strong></p> 
+      <a href="#demo2" (click)="abreInfo2 = !abreInfo2"> 
+        <img src="https://scontent-mia1-1.xx.fbcdn.net/v/t1.0-9/15171133_1497460786961441_508479736008722086_n.jpg?oh=838ef91b5264ae15c08013b1e88a00b9&oe=59B5ED62" class="img-circle person" alt="Random Name" width="255" height="255"> 
+      </a> 
+      <div class="collapse" [collapse]="!abreInfo2"> 
+        <p>Estudante de Engenharia de Software - UFG</p> 
+        <p>Desenvolvedor Full-Stack</p> 
+        <p>Cursando 7º período</p> 
+      </div> 
+    </div> 
+    <div class="col-sm-3"> 
+      <p class="text-center"><strong>João Henrique</strong></p> 
+      <a href="#demo3" (click)="abreInfo3 = !abreInfo3"> 
+        <img src="https://scontent-mia1-1.xx.fbcdn.net/v/t1.0-9/10305961_643148819126726_5203516738795697353_n.jpg?oh=7bc6436428abb9758f3ebe024dfe2e6f&oe=599C7023" class="img-circle person" alt="Random Name" width="255" height="255"> 
+      </a> 
+      <div class="collapse" [collapse]="!abreInfo3"> 
+        <p>Estudante de Engenharia de Software - UFG</p> 
+        <p>Desenvolvedor Full-Stack</p> 
+        <p>Cursando 7º período</p> 
+      </div> 
+    </div> 
+      <div class="col-sm-3"> 
+      <p class="text-center"><strong>Gabriel Barbosa</strong></p> 
+      <a href="#demo4" (click)="abreInfo4 = !abreInfo4"> 
+        <img src="https://scontent-mia1-1.xx.fbcdn.net/v/t1.0-9/10959674_447173758784337_6821884226283037114_n.jpg?oh=d0afda04512d71b4b11f0e1224609426&oe=59ADC047" class="img-circle person" alt="Random Name" width="255" height="255"> 
+      </a> 
+      <div class="collapse" [collapse]="!abreInfo4"> 
+        <p>Estudante de Engenharia de Software - UFG</p> 
+        <p>Desenvolvedor Full-Stack</p> 
+        <p>Cursando 7º período</p> 
+      </div> 
+     
+    </div> 
+  </div> 
+</div> 
+ 
+<!-- Container (TOUR Section) --> 
+<!--<div id="tour" class="bg-1"> 
+  <div class="container"> 
+    <h3 class="text-center">TOUR DATES</h3> 
+    <p class="text-center">Lorem ipsum we'll play you some music.<br> Remember to book your tickets!</p> 
+    <ul class="list-group"> 
+      <li class="list-group-item">September <span class="label label-danger">Sold Out!</span></li> 
+      <li class="list-group-item">October <span class="label label-danger">Sold Out!</span></li>  
+      <li class="list-group-item">November <span class="badge">3</span></li>  
+    </ul> 
+     
+    <div class="row text-center"> 
+      <div class="col-sm-4"> 
+        <div class="thumbnail"> 
+          <img src="paris.jpg" alt="Paris" width="400" height="300"> 
+          <p><strong>Paris</strong></p> 
+          <p>Friday 27 November 2015</p> 
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button> 
+        </div> 
+      </div> 
+      <div class="col-sm-4"> 
+        <div class="thumbnail"> 
+          <img src="newyork.jpg" alt="New York" width="400" height="300"> 
+          <p><strong>New York</strong></p> 
+          <p>Saturday 28 November 2015</p> 
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button> 
+        </div> 
+      </div> 
+      <div class="col-sm-4"> 
+        <div class="thumbnail"> 
+          <img src="sanfran.jpg" alt="San Francisco" width="400" height="300"> 
+          <p><strong>San Francisco</strong></p> 
+          <p>Sunday 29 November 2015</p> 
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+   
+  <!-- Modal  
+  <div class="modal fade" id="myModal" role="dialog"> 
+    <div class="modal-dialog"> 
+     
+      <!-- Modal content 
+      <div class="modal-content"> 
+        <div class="modal-header"> 
+          <button type="button" class="close" data-dismiss="modal">×</button> 
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4> 
+        </div> 
+        <div class="modal-body"> 
+          <form role="form"> 
+            <div class="form-group"> 
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label> 
+              <input type="number" class="form-control" id="psw" placeholder="How many?"> 
+            </div> 
+            <div class="form-group"> 
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label> 
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email"> 
+            </div> 
+              <button type="submit" class="btn btn-block">Pay  
+                <span class="glyphicon glyphicon-ok"></span> 
+              </button> 
+          </form> 
+        </div> 
+        <div class="modal-footer"> 
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> 
+            <span class="glyphicon glyphicon-remove"></span> Cancel 
+          </button> 
+          <p>Need <a href="#">help?</a></p> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+</div>--> 
+ 
+<!-- Container (The SHOWS Section) --> 
+<div id="shows" class="carousel slide" data-ride="carousel"> 
+  <!--<div class="carousel-inner"> - imagem preta e branca --> 
+    <carousel> 
+      <slide> 
+        <a href="#artistas"> 
+          <img src="../../assets/img/pecu_hej.jpg" alt="First slide"> 
+          <div class="carousel-caption"> 
+            <h3>Pecuária de Goiânia</h3> 
+            <p>Principais Artistas da atualidade se apresentarão em 5 grandes noites!</p> 
+          </div> 
+        </a> 
+      </slide> 
+      <slide> 
+        <img src="http://villamixfestival.com.br/wp-content/uploads/2017/04/SITE-1920x640-VMF-GOI%C3%82NIA-2017.png" alt="Second slide"> 
+        <div class="carousel-caption"> 
+          <h3>Vila Mix</h3> 
+          <p>Apresentações dos principais artistas nacionais e internacionais em 2 dias de Show!</p> 
+        </div> 
+      </slide> 
+      <slide> 
+        <img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="Third slide"> 
+        <div class="carousel-caption"> 
+          <h3>Festeja</h3> 
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> 
+        </div> 
+      </slide> 
+    </carousel> 
+  <!--</div>--> 
+</div> 
+ 
+ 
+ 
+ 
+<!-- Container (ARTISTAS Section) --> 
+<div id="artistas" class="container_artistas"> 
+  <div class="container"> 
+    <h1 class="text-center">Pecuária de Goiânia</h1> 
+    <a href="/musicas"> 
+    <div class="row equipo-item"> 
+      <div class="col-md-3 separador-vertical"><img src="http://portal02.cdn.superplayer.fm/5/1/516883178DCB822F4F6DFB5F85179E22.jpg" class="img-responsive center-block"></div>  
+      <div class="col-md-9"> 
+        <h2 class="titulo-equipo">Henrique & Juliano</h2> 
+        <ul style="list-style-type:none"> 
+          <li>Data: 27/06/2017</li> 
+          <li style="font-size:25px;font-weight:bold">Sábado</li> 
+          <li style="font-spacing:5px">Ingresso: R$22,00(Meia) | R$44,00(Inteira)</li> 
+        </ul>  
+      </div> 
+    </div> 
+    </a> 
+ 
+    <a href=""> 
+    <div class="row equipo-item"> 
+     <div class="col-md-3 separador-vertical"><img src="https://e.snmc.io/lk/l/a/9715564fcf823e4eb0b902bd7460bc55/6160312.jpg" class="img-responsive center-block"></div>  
+     <div class="col-md-9"> 
+       <h2 class="titulo-equipo">Maiara & Maraisa</h2> 
+       <ul style="list-style-type:none"> 
+         <li>Data: 26/06/2017</li> 
+         <li style="font-size:25px;font-weight:bold">Sexta Feira</li> 
+         <li style="font-spacing:5px">Ingresso: R$22,00(Meia) | R$44,00(Inteira)</li> 
+       </ul>  
+     </div> 
+    </div>  
+    </a> 
+  </div> 
+</div> 
+ 
+<!-- Container (MUSICAS Section) --> 
+<!--<div id="musicas" class="container_musicas"> 
+  <div class="container"> 
+    <h1 class="text-center">Músicas</h1> 
+    <div class="card-group" style="display: flex"> 
+      <div class="card" style="width: 300px;margin: 5px"> 
+        <div style="text-align: center"> 
+          <img class="card-img-top" width="150" height="150" 
+          src="http://1.bp.blogspot.com/-BwdnqYwDp7A/VeTJtFpZhJI/AAAAAAAAVeA/Tzz3VjJOo0Y/s1600/Bonde%2Bda%2BStronda%2B-%2B04%2B09%2B2015%2B-%2BCampinas%2Bshowscampinas.jpg" alt="Card image cap"> 
+          <div class="card-block"> 
+            <p class="card-title">Bonde da Stronda</p> 
+          </div> 
+        </div> 
+        <ul class="list-group list-group-flush"> 
+          <li class="list-group-item">Noite De Calor <button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Insana<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Interessante<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa História<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa Química<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era da Stronda<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bagulho É Muito Loco<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bem Que Eu Preciso<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bonde<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Caozeiro<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Ciclo<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Estilo Sou Eu<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Mundo Girou<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+        </ul> 
+      </div> 
+      <div class="card" style="width: 300px;margin: 5px"> 
+        <div style="text-align: center"> 
+          <img class="card-img-top" width="150" height="150" 
+          src="http://1.bp.blogspot.com/-BwdnqYwDp7A/VeTJtFpZhJI/AAAAAAAAVeA/Tzz3VjJOo0Y/s1600/Bonde%2Bda%2BStronda%2B-%2B04%2B09%2B2015%2B-%2BCampinas%2Bshowscampinas.jpg" alt="Card image cap"> 
+          <div class="card-block"> 
+            <p class="card-title">Bonde da Stronda</p> 
+          </div> 
+        </div> 
+        <ul class="list-group list-group-flush"> 
+          <li class="list-group-item">Noite De Calor <button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Insana<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Interessante<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa História<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa Química<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era da Stronda<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bagulho É Muito Loco<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bem Que Eu Preciso<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bonde<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Caozeiro<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Ciclo<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Estilo Sou Eu<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Mundo Girou<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+        </ul> 
+      </div> 
+      <div class="card" style="width: 300px;margin: 5px"> 
+        <div style="text-align: center"> 
+          <img class="card-img-top" width="150" height="150" 
+          src="http://1.bp.blogspot.com/-BwdnqYwDp7A/VeTJtFpZhJI/AAAAAAAAVeA/Tzz3VjJOo0Y/s1600/Bonde%2Bda%2BStronda%2B-%2B04%2B09%2B2015%2B-%2BCampinas%2Bshowscampinas.jpg" alt="Card image cap"> 
+          <div class="card-block"> 
+            <p class="card-title">Bonde da Stronda</p> 
+          </div> 
+        </div> 
+        <ul class="list-group list-group-flush"> 
+          <li class="list-group-item">Noite De Calor <button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Insana<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Interessante<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa História<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa Química<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era da Stronda<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bagulho É Muito Loco<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bem Que Eu Preciso<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bonde<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Caozeiro<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Ciclo<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Estilo Sou Eu<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Mundo Girou<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+        </ul> 
+      </div> 
+    </div> 
+    <div class="card-group" style="display: flex"> 
+      <div class="card" style="width: 300px;margin: 5px"> 
+        <div style="text-align: center"> 
+          <img class="card-img-top" width="150" height="150" 
+          src="http://1.bp.blogspot.com/-BwdnqYwDp7A/VeTJtFpZhJI/AAAAAAAAVeA/Tzz3VjJOo0Y/s1600/Bonde%2Bda%2BStronda%2B-%2B04%2B09%2B2015%2B-%2BCampinas%2Bshowscampinas.jpg" alt="Card image cap"> 
+          <div class="card-block"> 
+            <p class="card-title">Bonde da Stronda</p> 
+          </div> 
+        </div> 
+        <ul class="list-group list-group-flush"> 
+          <li class="list-group-item">Noite De Calor <button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Insana<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Interessante<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa História<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa Química<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era da Stronda<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bagulho É Muito Loco<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bem Que Eu Preciso<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bonde<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Caozeiro<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Ciclo<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Estilo Sou Eu<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Mundo Girou<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+        </ul> 
+      </div> 
+      <div class="card" style="width: 300px;margin: 5px"> 
+        <div style="text-align: center"> 
+          <img class="card-img-top" width="150" height="150" 
+          src="http://1.bp.blogspot.com/-BwdnqYwDp7A/VeTJtFpZhJI/AAAAAAAAVeA/Tzz3VjJOo0Y/s1600/Bonde%2Bda%2BStronda%2B-%2B04%2B09%2B2015%2B-%2BCampinas%2Bshowscampinas.jpg" alt="Card image cap"> 
+          <div class="card-block"> 
+            <p class="card-title">Bonde da Stronda</p> 
+          </div> 
+        </div> 
+        <ul class="list-group list-group-flush"> 
+          <li class="list-group-item">Noite De Calor <button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Insana<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Interessante<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa História<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa Química<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era da Stronda<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bagulho É Muito Loco<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bem Que Eu Preciso<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bonde<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Caozeiro<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Ciclo<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Estilo Sou Eu<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Mundo Girou<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+        </ul> 
+      </div> 
+      <div class="card" style="width: 300px;margin: 5px"> 
+        <div style="text-align: center"> 
+          <img class="card-img-top" width="150" height="150" 
+          src="http://1.bp.blogspot.com/-BwdnqYwDp7A/VeTJtFpZhJI/AAAAAAAAVeA/Tzz3VjJOo0Y/s1600/Bonde%2Bda%2BStronda%2B-%2B04%2B09%2B2015%2B-%2BCampinas%2Bshowscampinas.jpg" alt="Card image cap"> 
+          <div class="card-block"> 
+            <p class="card-title">Bonde da Stronda</p> 
+          </div> 
+        </div> 
+        <ul class="list-group list-group-flush"> 
+          <li class="list-group-item">Noite De Calor <button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Insana<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Interessante<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa História<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa Química<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era da Stronda<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bagulho É Muito Loco<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bem Que Eu Preciso<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bonde<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Caozeiro<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Ciclo<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Estilo Sou Eu<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Mundo Girou<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+        </ul> 
+      </div> 
+    </div> 
+    <div class="card-group" style="display: flex"> 
+      <div class="card" style="width: 300px;margin: 5px"> 
+        <div style="text-align: center"> 
+          <img class="card-img-top" width="150" height="150" 
+          src="http://1.bp.blogspot.com/-BwdnqYwDp7A/VeTJtFpZhJI/AAAAAAAAVeA/Tzz3VjJOo0Y/s1600/Bonde%2Bda%2BStronda%2B-%2B04%2B09%2B2015%2B-%2BCampinas%2Bshowscampinas.jpg" alt="Card image cap"> 
+          <div class="card-block"> 
+            <p class="card-title">Bonde da Stronda</p> 
+          </div> 
+        </div> 
+        <ul class="list-group list-group-flush"> 
+          <li class="list-group-item">Noite De Calor <button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Insana<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Interessante<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa História<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa Química<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era da Stronda<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bagulho É Muito Loco<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bem Que Eu Preciso<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bonde<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Caozeiro<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Ciclo<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Estilo Sou Eu<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Mundo Girou<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+        </ul> 
+      </div> 
+      <div class="card" style="width: 300px;margin: 5px"> 
+        <div style="text-align: center"> 
+          <img class="card-img-top" width="150" height="150" 
+          src="http://1.bp.blogspot.com/-BwdnqYwDp7A/VeTJtFpZhJI/AAAAAAAAVeA/Tzz3VjJOo0Y/s1600/Bonde%2Bda%2BStronda%2B-%2B04%2B09%2B2015%2B-%2BCampinas%2Bshowscampinas.jpg" alt="Card image cap"> 
+          <div class="card-block"> 
+            <p class="card-title">Bonde da Stronda</p> 
+          </div> 
+        </div> 
+        <ul class="list-group list-group-flush"> 
+          <li class="list-group-item">Noite De Calor <button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Insana<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Interessante<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa História<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa Química<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era da Stronda<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bagulho É Muito Loco<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bem Que Eu Preciso<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bonde<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Caozeiro<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Ciclo<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Estilo Sou Eu<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Mundo Girou<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+        </ul> 
+      </div> 
+      <div class="card" style="width: 300px;margin: 5px"> 
+        <div style="text-align: center"> 
+          <img class="card-img-top" width="150" height="150" 
+          src="http://1.bp.blogspot.com/-BwdnqYwDp7A/VeTJtFpZhJI/AAAAAAAAVeA/Tzz3VjJOo0Y/s1600/Bonde%2Bda%2BStronda%2B-%2B04%2B09%2B2015%2B-%2BCampinas%2Bshowscampinas.jpg" alt="Card image cap"> 
+          <div class="card-block"> 
+            <p class="card-title">Bonde da Stronda</p> 
+          </div> 
+        </div> 
+        <ul class="list-group list-group-flush"> 
+          <li class="list-group-item">Noite De Calor <button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Insana<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Noite Interessante<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa História<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nossa Química<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">Nova Era da Stronda<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bagulho É Muito Loco<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bem Que Eu Preciso<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Bonde<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Caozeiro<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Ciclo<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Estilo Sou Eu<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+          <li class="list-group-item">O Mundo Girou<button style="float: right;border-radius: 5px;background: rgb(51, 122, 183);color: #FFFFFF">Escolher</button></li> 
+        </ul> 
+      </div> 
+    </div> 
+  </div> 
+  <h1 class="text-center"><a href="">Mais artistas...</a></h1> 
+</div> 
+<hr/>--> 
+ 
+<!-- Container (Termos de Uso) --> 
+<div id="termos" class="container text-center"> 
+  <h3>TERMOS DE USO DA APLICAÇÃO</h3> 
+  <p><em>FAN, ESCOLHA SUAS MÚSICAS PREDILETAS!</em></p> 
+  <p>A equipe ASBuilT criou este site para os fãs de música. Só poderá ser utilizado um e-mail por usuário, e o voto será contabilizado para cada cantor do seu show escolhido. Caso queira  
+    compartilhar algum show com seus amigos nas redes sociais basta realizr o Login pelo Facebook ou Google e compartilhar na sua linha do tempo. O resultado final da votação das músicas será 
+    divulgado em uma data previamente disponibilizada no próprio site. Seus dados utilizados são os básicos de Perfil, selecionados no cadastro ou por meio da rede social (Nome, e-mail, foto). 
+  </p> 
+</div> 
+ 
+ 
+<!-- Container (Contact Section) --> 
+<div id="contato" class="container"> 
+  <h3 class="text-center">Contato</h3> 
+  <p class="text-center"><em>Quer participar de nosso projeto?</em></p><br> 
+ 
+  <div class="row"> 
+    <div class="col-md-4"> 
+      <p>Deixe sua mensagem.</p> 
+      <p><span class="glyphicon glyphicon-map-marker"></span> Goiânia, GO - Brasil</p> 
+      <p><span class="glyphicon glyphicon-phone"></span> Telefone: +55 (62)7070-7070</p> 
+      <p><span class="glyphicon glyphicon-envelope"></span> Email: mail@mail.com</p> 
+      <p><span class="glyphicon glyphicon-info-sign"></span><a href="http://github.com/pedlop"> Pedro Lopes</a></p> 
+    </div> 
+    <div class="col-md-8"> 
+      <div class="row"> 
+        <div class="col-sm-6 form-group"> 
+          <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required> 
+        </div> 
+        <div class="col-sm-6 form-group"> 
+          <input class="form-control" id="email" name="email" placeholder="E-mail" type="email" required> 
+        </div> 
+      </div> 
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comentário" rows="5"></textarea> 
+      <br> 
+      <div class="row"> 
+        <div class="col-md-12 form-group"> 
+          <button class="btn pull-right" type="submit">Enviar</button> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+  <br> 
+  <h3 class="text-center">Comentários</h3>   
+  <ul class="nav nav-tabs"> 
+    <li class="active"><a data-toggle="tab" href="#home">Beltrano</a></li> 
+    <li><a data-toggle="tab" href="#menu1">Fulano</a></li> 
+    <li><a data-toggle="tab" href="#menu2">Ciclano</a></li> 
+  </ul> 
+ 
+  <div class="tab-content"> 
+    <div id="home" class="tab-pane fade in active"> 
+      <h2>Beltrano Silva, Florianópolis</h2> 
+      <p>Cara, sensacional essa ideia, irei votar nas melhores músicas.</p> 
+    </div> 
+    <div id="menu1" class="tab-pane fade"> 
+      <h2>Fluano Zé, Porto Alegre</h2> 
+      <p>Agora participamos mais ainda do show.</p> 
+    </div> 
+    <div id="menu2" class="tab-pane fade"> 
+      <h2>Ciclano Filho, Inhumas</h2> 
+      <p>Eu acho que a aplicação é muito útil, ajuda os artistas e nos presenteia com essa escolha.</p> 
+    </div> 
+  </div> 
+</div> 
