@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Headers, Http } from '@angular/http';
-import { Discografia } from '../../model/discografia';
+import { Discografia } from '../../../model/discografia';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
