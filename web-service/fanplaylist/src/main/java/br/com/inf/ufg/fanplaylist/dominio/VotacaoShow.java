@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 /**
@@ -32,7 +33,7 @@ public class VotacaoShow extends Entidade {
      * ao Show onde cada artista participante
      * no show tem sua votação em separado.
      */
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "id_votocaoshow_votacoes",
             foreignKey = @ForeignKey(name = "fk_votocaoshow_votacoes"))
     private Collection<VotacaoArtista> votacoes;

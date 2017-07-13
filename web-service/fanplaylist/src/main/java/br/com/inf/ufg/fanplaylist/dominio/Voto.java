@@ -21,8 +21,8 @@ public class Voto extends Entidade {
      * Usuario associado ao voto.
      */
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "id_voto_musica",
-            foreignKey = @ForeignKey(name = "fk_voto_musica"))
+    @JoinColumn(name = "id_voto_usuario",
+            foreignKey = @ForeignKey(name = "fk_voto_usuario"))
     private Usuario usuario;
     
     /**
