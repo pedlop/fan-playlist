@@ -15,12 +15,12 @@ import { DnsWebService } from '../../model-controller-angular2/model/webservice/
 })
 export class LoginComponent implements OnInit {
 
-  public controller: ContrLoginRedePontal;
+  public controller: ControllerLogin;
   /* Dados de login.*/
   public usuarioDTO: UsuarioDTO = new UsuarioDTO();
 
   constructor(private webService: WebService, public router: Router) {
-    this.controller = new ContrLoginRedePontal();
+    this.controller = new ControllerLogin();
     this.controller.setFormCdsClienteComponent(this, this.webService);
   }
 
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 
   public logar(): void {
     /* Preenche os DTO(s).*/
-    const prmtr: ParametroLoginRedePontal = new ParametroLoginRedePontal();
+    const prmtr: ParametroLogin = new ParametroLogin();
 
     if (this.controller.tokenSincronizacaoOK) {
       this.webService.pegarTokenSincronizacao(true).subscribe((rest) => {
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
 
 }
 
-class ContrLoginRedePontal extends Controller {
+class ControllerLogin extends Controller {
   public tokenSincronizacaoOK = true;
   private component: LoginComponent;
   private webservice : WebService;
@@ -68,18 +68,13 @@ class ContrLoginRedePontal extends Controller {
   }
 
   casoComunicacaoCompleta(): void {
-    // this.component.alerts.push({
-    //   type: 'success',
-    //   msg: 'Login realizado com sucesso!',
-    //   timeout: 2000
-    // });
     this.tokenSincronizacaoOK = true;
-    /*Guarda o token de seguranca do usuario na memoria./
+    /*Guarda o token de seguranca do usuario na memoria.*/
     localStorage.setItem(DnsWebService.storageTokenUsuario,
     this.response.text());
   }
 }
 
-class ParametroLoginRedePontal extends Dto {
+class ParametroLogin extends Dto {
   public loginDTO: UsuarioDTO;
 }
