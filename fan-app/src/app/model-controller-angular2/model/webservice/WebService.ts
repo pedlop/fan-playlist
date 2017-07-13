@@ -98,7 +98,7 @@ export class WebService {
 
     loginUsuario(login: UsuarioDTO, controller : Controller): void {
         this.http.post(
-            DnsWebService.dns + '/ControllerLogin/login',
+            DnsWebService.dns + '/ControllerUsuario/salvarUsuario',
             JSON.stringify(login),
             { headers: this.getHeaderLogin() })
             .subscribe(controller);

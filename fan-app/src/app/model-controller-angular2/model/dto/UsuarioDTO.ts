@@ -2,8 +2,9 @@
  * Data: 13/Julho/2017.
  * Objetivo: Classe que correponde ao UsuarioDTO
 */
+import {Dto} from './Dto';
 
-export class UsuarioDTO {
+export class UsuarioDTO extends Dto {
 
     private id: number;
     
