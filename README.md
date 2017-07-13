@@ -15,7 +15,7 @@ Para o desenvolvimento do projeto serão utilizadas ferramentas para auxiliar na
 **Linguagem de Programação & Frameworks:**
 - [Angular 4](https://angular.io/) - _Framework JavaScript open-source, mantido pelo Google, que auxilia na execução de single-page applications._
 - [Java](https://www.oracle.com/java/index.html) - _Linguagem de programação interpretada orientada a objetos._
-- [Spark](http://sparkjava.com/) - _Um micro framework para criar aplicações web em Java 8._
+- [Spring Boot](https://projects.spring.io/spring-boot/) - _Toma uma visão de opinião sobre a construção de aplicativos Spring prontos para produção._
 - [Spring Data](http://projects.spring.io/spring-data/) - _Fornece um modelo de programação familiar e consistente baseado em Spring para acesso a dados, mantendo os traços especiais do armazenamento de dados subjacente._
 - [Hibernate](http://hibernate.org/) - _Framework para o mapeamento objeto-relacional escrito na linguagem Java._
 - [JUnit](http://junit.org/junit4/) - _Estrutura simples para escrever testes repetitivos. É uma instância da arquitetura xUnit para estruturas de teste de unidade._
