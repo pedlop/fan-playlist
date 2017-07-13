@@ -6,6 +6,7 @@ import { ExcecaoNegocio } from '../../model-controller-angular2/model/excecao/Ex
 import { Dto } from '../../model-controller-angular2/model/dto/Dto';
 import { UsuarioDTO } from '../../model-controller-angular2/model/dto/UsuarioDTO';
 import { DnsWebService } from '../../model-controller-angular2/model/webservice/DnsWebService';
+import { Endereco } from '../../model-controller-angular2/model/webservice/Endereco';
 
 @Component({
   selector: 'app-login',
@@ -28,20 +29,18 @@ export class LoginComponent implements OnInit {
   }
 
   public logar(): void {
-    /* Preenche os DTO(s).*/
-    const prmtr: ParametroLogin = new ParametroLogin();
-
+    console.log(this.usuarioDTO);
     if (this.controller.tokenSincronizacaoOK) {
       this.webService.pegarTokenSincronizacao(true).subscribe((rest) => {
-        this.controller.setFormCdsClienteComponent(this, this.webService);
-        this.webService.loginUsuario(this.usuarioDTO, this.controller);
         this.controller.tokenSincronizacaoOK = false;
+        this.controller.setFormCdsClienteComponent(this, this.webService);
+        this.webService.requisicaoPost(true,
+            Endereco.CADASTRAR_USUARIO, rest.text(),
+            this.usuarioDTO, this.controller);
       },
         (erro: any) => {
           this.controller.tokenSincronizacaoOK = true;
         });
-    } else {
-      //requisicao ja enviada
     }
   }
 
@@ -73,8 +72,4 @@ class ControllerLogin extends Controller {
     localStorage.setItem(DnsWebService.storageTokenUsuario,
     this.response.text());
   }
-}
-
-class ParametroLogin extends Dto {
-  public loginDTO: UsuarioDTO;
 }
