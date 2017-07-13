@@ -34,6 +34,9 @@ public final class ConstanteString {
     /**Tamanho 30 caracteres para campos banco.*/
     public static final int TEXTO30 = 30;
 
+    /**Tamanho 30 caracteres para campos banco.*/
+    public static final int TEXTO50 = 50;
+    
     /**
      * Constante para ser usado nas notações de validação de dados. De modo que
      * o código reflexivo não valide o tamanho de String de tamanho ilimitado.
