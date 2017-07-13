@@ -7,6 +7,7 @@ import { MusicasRoutes } from './musicas/index';
 import { RankingRoutes } from './ranking/index';
 import { RegistrarRoutes } from './registrar/index';
 import { PaginaInicialRoutes } from './pagina-inicial/index';
+import { PerfiRoutes } from './perfil/index';
 
 export const HomeRoutes: Route[] = [
   {
@@ -20,6 +21,7 @@ export const HomeRoutes: Route[] = [
         ...RankingRoutes,
         ...RegistrarRoutes,
         ...PaginaInicialRoutes,
+        ...PerfiRoutes
 
     ]
   }

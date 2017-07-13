@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -95,5 +96,15 @@ public class ControllerUsuario {
         }
         return usuarioDTO;
     }
- 
+    
+    @Secured({ TipoUsuario.ADMIN_S, TipoUsuario.APP_S })
+    @RequestMapping(method = RequestMethod.POST,
+            value = "/ControllerUsuario/findByEmail/{email}")    
+    public UsuarioDTO findByEmail(@PathVariable("email") String email) {
+    	if (email != null) {
+    		return UsuarioDTO.converteDominioDto(
+    				iUsuarioRepositorio.findByEmail(email).get());
+    	}
+    	return null;
+    }
 }

@@ -6,11 +6,11 @@ import {Dto} from './Dto';
 
 export class UsuarioDTO extends Dto {
 
-    private id: number;
+    public  id: number;
     
-    private email: string;
+    public email: string;
     
-    private senha: string;
+    public senha: string;
 
     public tipoUsuario: string;
 }

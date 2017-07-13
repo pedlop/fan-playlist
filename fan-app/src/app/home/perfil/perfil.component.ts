@@ -10,15 +10,17 @@ import { Endereco } from '../../model-controller-angular2/model/webservice/Ender
 
 
 @Component({
-  selector: 'app-registrar',
-  templateUrl: './registrar.component.html',
-  styleUrls: ['./registrar.component.css']
+  selector: 'app-perfil',
+  templateUrl: './perfil.component.html',
+  styleUrls: ['./perfil.component.css']
 })
-export class RegistrarComponent implements OnInit {
+export class PerfilComponent implements OnInit {
 
   public controller: ControllerLogin;
   /* Dados de login.*/
   public usuarioDTO: UsuarioDTO = new UsuarioDTO();
+
+  public senhaCorfim : string = '';
 
   constructor(private webService: WebService, public router: Router) {
     this.controller = new ControllerLogin();
@@ -27,16 +29,27 @@ export class RegistrarComponent implements OnInit {
 
 
   ngOnInit() {
+    this.webService.requesicaoGetObs(true, Endereco.FIND_BY_EMAIL, localStorage.getItem('emaiUser'))
+                  .subscribe(resp => {
+       if (!resp.text() != null){
+         this.usuarioDTO = JSON.parse(resp.text());
+       } else {
+         alert('Por gentileza realize o login');
+       }
+    });
   }
 
-  public cadastrar(): void {
+  public atualizar(): void {
     console.log(this.usuarioDTO);
+    if (this.senhaCorfim.localeCompare(this.usuarioDTO.senha) === 0) {
+      alert('Por favor digite as senhas que confirmem');
+    }
     if (this.controller.tokenSincronizacaoOK) {
       this.webService.pegarTokenSincronizacao(true).subscribe((rest) => {
         this.controller.tokenSincronizacaoOK = false;
         this.controller.setFormCdsClienteComponent(this, this.webService);
         this.webService.requisicaoPost(true,
-            Endereco.CADASTRAR_USUARIO, rest.text(),
+            Endereco.ATUALIZAR_USUARIO, rest.text(),
             this.usuarioDTO, this.controller);
       },
         (erro: any) => {
@@ -50,10 +63,10 @@ export class RegistrarComponent implements OnInit {
 
 class ControllerLogin extends Controller {
   public tokenSincronizacaoOK = true;
-  private component: RegistrarComponent;
+  private component: PerfilComponent;
   private webservice : WebService;
 
-  setFormCdsClienteComponent(f: RegistrarComponent,webservice : WebService) {
+  setFormCdsClienteComponent(f: PerfilComponent,webservice : WebService) {
     this.component = f;
     this.webservice = webservice;
   }
@@ -73,7 +86,6 @@ class ControllerLogin extends Controller {
     /*Guarda o token de seguranca do usuario na memoria.*/
     localStorage.setItem(DnsWebService.storageTokenUsuario,
     this.response.text());
-
-    localStorage.setItem('emaiUser', this.component.usuarioDTO.email);
+    alert('Senha atualizada com sucesso!');
   }
 }

@@ -9,6 +9,7 @@ import { RegistrarModule } from './registrar/registrar.module';
 import { RankingModule } from './ranking/ranking.module';
 import { MusicasModule } from './musicas/musicas.module';
 import { PaginaInicialModule } from './pagina-inicial/pagina-inicial.module';
+import { PerfilModule } from './perfil/perfil.module';
 
 @NgModule({
     imports: [
@@ -23,7 +24,8 @@ import { PaginaInicialModule } from './pagina-inicial/pagina-inicial.module';
         RegistrarModule,
         RankingModule,
         MusicasModule,
-        PaginaInicialModule
+        PaginaInicialModule,
+        PerfilModule
         ],
     declarations: [HomeComponent],
     exports: [HomeComponent]

@@ -29,5 +29,10 @@ export const rotaPrincipal: Routes = [
       path: 'musicas',
       redirectTo: '/homeComponent/musicas',
       pathMatch: 'full'
+    },
+    {
+      path: 'perfil',
+      redirectTo: '/homeComponent/perfil',
+      pathMatch: 'full'
     }
 ];

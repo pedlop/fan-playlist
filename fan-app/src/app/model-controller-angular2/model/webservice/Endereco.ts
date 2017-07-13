@@ -16,4 +16,6 @@ export class Endereco {
 
     public static DELETAR_USUARIO   = '/ControllerUsuario/deletarUsuario';
 
+    public static FIND_BY_EMAIL = '/ControllerUsuario/findByEmail';
+
 }
