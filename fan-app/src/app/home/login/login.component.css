@@ -18,7 +18,7 @@ body{
 .omb_login h2{
     color: #2d2d30;
     font-size: 2.5em;
-    background-color:rgba(229, 229, 229, 0.9);
+    background-color:rgba(253, 246, 246, 0.99);
     margin-left: 25.75%;
     margin-right: 25.75%; 
 }
@@ -79,7 +79,6 @@ body{
     .omb_login .omb_forgotPwd {
         text-align: right;
 		margin-top:10px;
-        background-color: rgba(229, 229, 229, 0.9);
  	}		
 }
 
@@ -144,4 +143,8 @@ footer a:hover {
 * {
     margin: 20;
     padding:0;
+}
+
+tela {
+    padding: 130px;
 }
