@@ -7,8 +7,6 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import { TypeaheadMatch } from 'ngx-bootstrap/typeahead';
 import {SelectItem} from 'primeng/primeng';
-import {SelectButtonModule} from 'primeng/primeng';
-import {ButtonModule} from 'primeng/primeng';
 
 @Component({
   selector: 'app-musicas',
@@ -17,17 +15,7 @@ import {ButtonModule} from 'primeng/primeng';
 })
 export class MusicasComponent implements OnInit {
 
-  cities: SelectItem[];
-
-  selectedCity: string;
-
-  selectedCities: string[];
-
-  cars: SelectItem[];
-  selectedCar: string;
-
-
-  selectedCategories: string[] = ['Technology', 'Sports'];
+  selectedCategories: string[] = [];
 
   checked: boolean = false;
   checked2: boolean = false;
@@ -36,8 +24,6 @@ export class MusicasComponent implements OnInit {
   public discografiaCantor : string[];
   private url : string = "../../assets/led/hej-discografia.json";
 
-  musics: SelectItem[];
-  selectedMusic: string;
   public listaMusicas: Array<Discografia> = new Array<Discografia>();
 
   public asyncSelected: string;
@@ -66,41 +52,13 @@ export class MusicasComponent implements OnInit {
       })
       .mergeMap((token: string) => this.getStatesAsObservable(token));
 
-      this.cities = [];
-        this.cities.push({label:'New York', value:'New York'});
-        this.cities.push({label:'Rome', value:'Rome'});
-        this.cities.push({label:'London', value:'London'});
-        this.cities.push({label:'Istanbul', value:'Istanbul'});
-        this.cities.push({label:'Paris', value:'Paris'});
-
-      this.cars = [];
-        this.cars.push({label: 'Audi', value: 'Audi'});
-        this.cars.push({label: 'BMW', value: 'BMW'});
-        this.cars.push({label: 'Fiat', value: 'Fiat'});
-        this.cars.push({label: 'Ford', value: 'Ford'});
-        this.cars.push({label: 'Honda', value: 'Honda'});
-        this.cars.push({label: 'Jaguar', value: 'Jaguar'});
-        this.cars.push({label: 'Mercedes', value: 'Mercedes'});
-        this.cars.push({label: 'Renault', value: 'Renault'});
-        this.cars.push({label: 'VW', value: 'VW'});
-        this.cars.push({label: 'Volvo', value: 'Volvo'});
-
-      this.musics = [];
-      this.musics.push({label: 'Não Passa Vontade', value: 'Não Passa Vontade'});
-      this.musics.push({label: 'Meu Amor', value: 'Meu Amor'});
-      this.musics.push({label: 'De Trás Pra Frente', value: 'De Trás Pra Frente'});
-      this.musics.push({label: 'Vidinha de Balada', value: 'Vidinha de Balada'});
-      this.musics.push({label: 'O Céu Explica Tudo', value: 'O Céu Explica Tudo'});
-      this.musics.push({label: 'Aquela pessoa', value: 'Aquela pessoa'});
-      this.musics.push({label: 'Modo Sofrimento', value: 'Modo Sofrimento'});
-      this.musics.push({label: 'Bebida com Saudade', value: 'Bebida com Saudade'});
-
+    this.listaMusicas = [];
     this.listaMusicas.push(
       { 
-        "titulo" : "O Céu Explica Tudo",
-        "ano" : "2017",
-        "imagem" : "../../assets/img/Henrique-e-Juliano-O-Céu-Explica-Tudo.jpg",
-        "musicas" : [
+        titulo : "O Céu Explica Tudo",
+        ano : "2017",
+        imagem : "../../assets/img/Henrique-e-Juliano-O-Céu-Explica-Tudo.jpg",
+        musicas : [
           "Não Passa Vontade",
           "Meu Amor",
           "De Trás Pra Frente",
@@ -123,10 +81,10 @@ export class MusicasComponent implements OnInit {
         ]
       },
       {
-          "titulo" : "Novas Historias",
-          "ano" : "2015",
-          "imagem" : "../../assets/img/HeJ-Novas-Historias.jpg",
-          "musicas" : [
+          titulo : "Novas Historias",
+          ano : "2015",
+          imagem : "../../assets/img/HeJ-Novas-Historias.jpg",
+          musicas : [
             "Na Hora da Raiva",
             "Como É Que a Gente Fica",
             "Ele Quer Ser Eu",
@@ -144,10 +102,10 @@ export class MusicasComponent implements OnInit {
           ]
         },
         {
-          "titulo" : "Ao Vivo em Brasília",
-          "ano" : "2014",
-          "imagem" : "https://www.henriqueejuliano.com.br/uploads/cache/discografia/fd6e6c407db03d333334c3061d8f1fa1-370x370.jpg",
-          "musicas" : [
+          titulo : "Ao Vivo em Brasília",
+          ano : "2014",
+          imagem : "../../assets/img/henrique-e-juliano-ao-vivo-em-brasilia.jpg",
+          musicas : [
             "Gordinho Saliente",
             "Até Você Voltar",
             "Céu Particular",

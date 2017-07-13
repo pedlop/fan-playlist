@@ -1,85 +1,29 @@
-<!--<div>    
-    <h3>Multiple</h3>
-    <p-selectButton [options]="types" [(ngModel)]="selectedTypes" multiple="multiple"></p-selectButton>
-    <p>Selected Types: <span *ngFor="let type of selectedTypes">{{type}} </span></p>
-
-    <hr />
-
-    <button type="button" (click)="clear()" pButton icon="fa-close" label="Clear"></button>
-  </div>-->
-  <!--<div>
-    
-    <h3 class="first">Basic</h3>
-    <div class="ui-g" style="width:250px;margin-bottom:10px">
-        <div class="ui-g-12"><p-checkbox name="group1" value="New York" label="New York" [(ngModel)]="selectedCities"></p-checkbox></div>
-        <div class="ui-g-12"><p-checkbox name="group1" value="San Francisco" label="San Francisco" [(ngModel)]="selectedCities"></p-checkbox></div>
-        <div class="ui-g-12"><p-checkbox name="group1" value="Los Angeles" label="Los Angeles" [(ngModel)]="selectedCities"></p-checkbox></div>
-    </div>
-
-    Selected Cities: <span *ngFor="let city of selectedCities" style="margin-right:10px">{{city}}</span>
-
-    <h3>Preselection</h3>
-    <div class="ui-g" style="width:250px;margin-bottom:10px">
-        <div class="ui-g-12"><p-checkbox name="group2" value="Technology" label="Technology" [(ngModel)]="selectedCategories"></p-checkbox></div>
-        <div class="ui-g-12"><p-checkbox name="group2" value="Finance" label="Finance" [(ngModel)]="selectedCategories"></p-checkbox></div>
-        <div class="ui-g-12"><p-checkbox name="group2" value="Sports" label="Sports" [(ngModel)]="selectedCategories"></p-checkbox></div>
-        <div class="ui-g-12"><p-checkbox name="group2" value="Entertainment" label="Entertainment" [(ngModel)]="selectedCategories"></p-checkbox></div>
-    </div>
-
-    Selected Categories: <span *ngFor="let cat of selectedCategories" style="margin-right:10px">{{cat}} </span>
-
-    <h3>Boolean - {{checked}}</h3>
-    <p-checkbox [(ngModel)]="checked" binary="true"></p-checkbox>
-  </div>-->
- 
-  <!--<div>
-    <h3>Customized - ({{checked2}})</h3>
-     <p-toggleButton [(ngModel)]="checked2" onLabel="I confirm" offLabel="I reject" onIcon="fa-heart" offIcon="fa-heart-o" [style]="{'width':'150px', 'height':'50px'}"></p-toggleButton> 
-  </div>-->
-
-  <div>
-    <pre class="card card-block card-header">Model: {{asyncSelected | json}}</pre>
-    <!-- <input [(ngModel)]="asyncSelected"
-          [typeahead]="dataSource"
-          (typeaheadLoading)="changeTypeaheadLoading($event)"
-          (typeaheadNoResults)="changeTypeaheadNoResults($event)"
-          (typeaheadOnSelect)="typeaheadOnSelect($event)"
-          typeaheadOptionsLimit="7"
-          typeaheadOptionField="artista"
-          placeholder="Selecione um artista"
-          class="form-control"> -->
-    <div *ngIf="typeaheadLoading===true">
-      <i class="glyphicon glyphicon-refresh ng-hide" style=""></i>
-    </div>
-    <div *ngIf="typeaheadNoResults===true" class="" style="">
-      <i class="glyphicon glyphicon-remove"></i> No Results Found
-    </div>
-  </div>
-
-  <div>
-    <h3>Advanced (Multiple, Checkbox and Filter)</h3>
-    <p-listbox [options]="musics" [(ngModel)]="selectedMusics" multiple="multiple" checkbox="checkbox" filter="filter"></p-listbox>
-    <p>Selected Cities: <span *ngFor="let item of selectedMusics" style="margin-right: 10px">{{item}}</span></p>
-    <p>Selected Car: {{selectedCar}}</p>
-  
-
-  <button type="button" (click)="selectedMusics=null" pButton icon="fa-close" label="Clear Selected Car">Zerar Musicas</button>
-    <p-multiSelect [options]="musics" [(ngModel)]="selectedMusics"></p-multiSelect>
-
-</div>
+<br>
+<br>
 
 <div>
-  <h3>Content</h3>
-<p-listbox [options]="cars" [(ngModel)]="selectedCar" multiple="multiple" [style]="{'width':'190px','max-height':'250px'}">
-    <ng-template let-car pTemplate="item">
-        <div class="ui-helper-clearfix">
-            <span style="font-size:20px;float:right;margin:15px 10px 0 0">{{car.value}}</span>
-        </div>
-    </ng-template>
-</p-listbox>
-<p>Selected Car: {{selectedCar}}</p>
+  <pre class="card card-block card-header">Model: {{asyncSelected | json}}</pre>
+    <input [(ngModel)]="asyncSelected"
+        [typeahead]="dataSource"
+        (typeaheadLoading)="changeTypeaheadLoading($event)"
+        (typeaheadNoResults)="changeTypeaheadNoResults($event)"
+        (typeaheadOnSelect)="typeaheadOnSelect($event)"
+        typeaheadOptionsLimit="7"
+        typeaheadOptionField="artista"
+        placeholder="Selecione um artista"
+        class="form-control">
+  <div *ngIf="typeaheadLoading===true">
+    <i class="glyphicon glyphicon-refresh ng-hide" style=""></i>
+  </div>
+  <div *ngIf="typeaheadNoResults===true" class="" style="">
+    <i class="glyphicon glyphicon-remove"></i> No Results Found
+  </div>
+</div>
 
-<button type="button" (click)="selectedCar=null" pButton icon="fa-close" label="Clear Selected Car"></button>
+<br>
+
+<div style="padding-left:30px;">
+  Musicas Selecionadas: <span *ngFor="let music of selectedCategories" style="margin-right:10px">{{music}}</span>
 </div>
 
   <div id="albuns" class="container">
@@ -91,27 +35,16 @@
           <h2 class="titulo-album">{{item.titulo}}</h2>
           <h3 class="subtitulo-album">{{item.ano}}</h3>
           <p class="texto-album">Henrique e Juliano</p>
-          <!--<div *ngFor="let musica of item.musicas" > -->
-          <!--<select multiple class="form-control" >
-            <option *ngFor="let musica of item.musicas">{{musica}}</option>
-          </select>-->
-          
-            <!--<p-listbox [options]="musics" 
-            [(ngModel)]="selectedMusics" 
-            multiple="multiple" 
-            checkbox="checkbox" 
-            filter="filter"></p-listbox>-->
 
           <div class="well">
             <ul ul id="check-list-box" class="list-group checked-list-box" *ngFor="let musica of item.musicas" > 
               <li class="list-group-item">
-                {{musica}}
-                <span class="badge" >{{votos()}}</span>
+                <p-checkbox name="grupo" value="{{musica}}" label="{{musica}}" [(ngModel)]="selectedCategories"></p-checkbox> 
+                <!--<span class="badge" >{{votos()}}</span>-->
               </li>
             </ul>
           </div>
 
-        <!--</div>-->
       </div>
       </div>
     </div> 
