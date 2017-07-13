@@ -1,26 +1,7 @@
-body{
-  border-radius:0px!important;
-    box-shadow:1px 1px 4px rgba(0,0,0,0.4);
-    background-position: center center;
-    background-repeat: repeat;
-    background-image: url(http://poracaso.com/wp-content/uploads/2016/10/show-2015-brasil.jpg); 
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
 @media (min-width: 768px) {
     .omb_row-sm-offset-3 div:first-child[class*="col-"] {
         margin-left: 25%;
     }
-}
-
-.omb_login h2{
-    color: #2d2d30;
-    font-size: 2.5em;
-    background-color:rgba(253, 246, 246, 0.99);
-    margin-left: 25.75%;
-    margin-right: 25.75%; 
 }
 
 .omb_login .omb_authTitle {
@@ -29,7 +10,7 @@ body{
 }
 	
 .omb_login .omb_socialButtons a {
-	color: white; // In yourUse @body-bg 
+	color: white;
 	opacity:0.9;
 }
 .omb_login .omb_socialButtons a:hover {
@@ -66,31 +47,12 @@ body{
 	width: 3em;
 	text-align: center;
 }			
-
-.omb_login .omb_loginForm .input-group.i {
-	width: 2em;
-}
-.omb_login .omb_loginForm  .help-block {
-    color: #D0C2C2;
-}
-
 	
 @media (min-width: 768px) {
     .omb_login .omb_forgotPwd {
         text-align: right;
 		margin-top:10px;
  	}		
-}
-
-.material-switch > input[type="checkbox"] {
-    display: none;   
-}
-
-.material-switch > label {
-    cursor: pointer;
-    height: 0px;
-    position: relative; 
-    width: 40px;  
 }
 
 .material-switch > label::before {
@@ -127,24 +89,7 @@ body{
     left: 20px;
 }
 
-footer {
-    background-color: #2d2d30;
-    color: #f5f5f5;
-    padding: 38px;
-}
-footer a {
-    color: #f5f5f5;
-}
-footer a:hover {
-    color: #777;
-    text-decoration: none;
-}
-
 * {
     margin: 20;
     padding:0;
-}
-
-tela {
-    padding: 130px;
 }
