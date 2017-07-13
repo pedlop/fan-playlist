@@ -1,0 +1,32 @@
+.font-banner-principal {
+  color: #FFFFFF;
+  background-color: rgba(239, 118, 4, 0.60);
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: larger;
+  font-variant: normal;
+  text-align: left;
+  text-decoration: none;
+}
+
+.font-principal-titulo {
+  color: #fe9126;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-align: center;
+  text-decoration: none;
+  font-size: 48px;
+}
+
+.app-promocao-component-margem-pagina-inicial {
+    margin-top: 50px;
+}
+
+.mobileHide { display: inline;}
+/* Smartphone Portrait and Landscape */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){  .mobileHide { display: none;}}
