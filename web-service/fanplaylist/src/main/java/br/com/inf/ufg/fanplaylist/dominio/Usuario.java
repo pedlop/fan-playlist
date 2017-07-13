@@ -66,7 +66,7 @@ public class Usuario extends Entidade implements UserDetails {
             descricaoMensagem = "Usuario20.mensagem",
             nomeClasse = "Usuario",
             regex = ConstanteString.SEM_REGEX,
-            tamanho = ConstanteString.TEXTO30)
+            tamanho = ConstanteString.TEXTOILIMITADO)
     private String senha;
     
     /** Tipo de usuario. */
