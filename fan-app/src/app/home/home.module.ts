@@ -10,6 +10,8 @@ import { RankingModule } from './ranking/ranking.module';
 import { MusicasModule } from './musicas/musicas.module';
 import { PaginaInicialModule } from './pagina-inicial/pagina-inicial.module';
 import { PerfilModule } from './perfil/perfil.module';
+import { AdministrarModule } from './administrar/administrar.module';
+
 
 @NgModule({
     imports: [
@@ -25,7 +27,8 @@ import { PerfilModule } from './perfil/perfil.module';
         RankingModule,
         MusicasModule,
         PaginaInicialModule,
-        PerfilModule
+        PerfilModule,
+        AdministrarModule
         ],
     declarations: [HomeComponent],
     exports: [HomeComponent]

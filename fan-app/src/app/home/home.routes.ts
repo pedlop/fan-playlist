@@ -8,6 +8,12 @@ import { RankingRoutes } from './ranking/index';
 import { RegistrarRoutes } from './registrar/index';
 import { PaginaInicialRoutes } from './pagina-inicial/index';
 import { PerfiRoutes } from './perfil/index';
+import { AdministrarRoutes } from './administrar/index';
+import { AdministrarShowsRoutes } from "./administrar/administrar-shows/index";
+import { AdministrarArtistasRoutes } from './administrar/administrar-artistas/index';
+import { AdministrarMusicasRoutes } from './administrar/administrar-musicas/index';
+
+
 
 export const HomeRoutes: Route[] = [
   {
@@ -21,7 +27,11 @@ export const HomeRoutes: Route[] = [
         ...RankingRoutes,
         ...RegistrarRoutes,
         ...PaginaInicialRoutes,
-        ...PerfiRoutes
+        ...PerfiRoutes,
+        ...AdministrarRoutes,
+        ...AdministrarShowsRoutes,
+        ...AdministrarArtistasRoutes,
+        ...AdministrarMusicasRoutes
 
     ]
   }
