@@ -1,0 +1,13 @@
+.escolha .form-control {
+
+    width: 30%;
+    margin-left: 30px;
+}
+
+@media(max-width: 600px) {
+    .escolha .form-control {
+        width: auto;
+        margin: 30px;
+    }
+}
+

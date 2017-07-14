@@ -1,0 +1,70 @@
+<div class="escolha" style="margin-top:4%;margin-bottom:5%;">
+  <pre class="card card-block card-header">Cantores Selecionados: {{asyncSelected | json}}</pre>
+    <input [(ngModel)]="asyncSelected"
+        [typeahead]="dataSource"
+        (typeaheadLoading)="changeTypeaheadLoading($event)"
+        (typeaheadNoResults)="changeTypeaheadNoResults($event)"
+        (typeaheadOnSelect)="typeaheadOnSelect($event)"
+        typeaheadOptionsLimit="7"
+        typeaheadOptionField="artista"
+        placeholder="Selecione um artista"
+        class="form-control">
+  <div *ngIf="typeaheadLoading===true">
+    <i class="glyphicon glyphicon-refresh ng-hide" style=""></i>
+  </div>
+  <div *ngIf="typeaheadNoResults===true" class="" style="">
+    <i class="glyphicon glyphicon-remove"></i> No Results Found
+  </div>
+</div>
+
+<div class="formulario-admin">
+<form id="surveyForm" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Título do Álbum</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="album" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Ano de Lançamento</label>
+        <div class="col-xs-5">
+            <input type="number" class="form-control" name="ano" />
+        </div>
+    </div>
+      
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Foto para o Álbum</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="foto-album" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Músicas</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="musicas[]" />
+        </div>
+        <div class="col-xs-4">
+            <button type="button" class="btn btn-default addButton"><i class="fa fa-plus"></i></button>
+        </div>
+    </div>
+
+    <!-- The option field template containing an option field and a Remove button -->
+    <div class="form-group hide" id="optionTemplate">
+        <div class="col-xs-offset-3 col-xs-5">
+            <input class="form-control" type="text" name="option[]" />
+        </div>
+        <div class="col-xs-4">
+            <button type="button" class="btn btn-default removeButton"><i class="fa fa-minus"></i></button>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-5 col-xs-offset-3">
+            <button type="submit" class="btn btn-default">Validate</button>
+        </div>
+    </div>
+</form>
+
+</div>
