@@ -1,49 +1,27 @@
-    <div class="container">
-      <div class="panel panel-default">
-        <div class="row">
-          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-          <form role="form">
-            <h2>Registre-se </h2>
-            <p> Cante junto com seus artistas favoritos!!</p>
-            <hr style="border: solid #E6E6E6; border-width: 5px 0 0; clear: both; margin: 22px 0 21px; height: 0;">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-6">
-                <div class="form-group">
-                      <input type="text" name="primeiro_nome" id="primeiro_nome" class="form-control input-lg" placeholder="Primeiro Nome" tabindex="1">
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-6">
-                <div class="form-group">
-                  <input type="text" name="sobrenome" id="sobrenome" class="form-control input-lg" placeholder="Sobrenome" tabindex="2">
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" name="nome_usuario" id="nome_usuario" class="form-control input-lg" placeholder="Nome de Usuário" tabindex="3">
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" id="email" class="form-control input-lg"  [(ngModel)]="usuarioDTO.email" placeholder="Email" tabindex="4">
-            </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-6">
-                <div class="form-group">
-                  <input type="password" name="senha" id="senha" class="form-control input-lg" [(ngModel)]="usuarioDTO.senha" placeholder="Senha" tabindex="5">
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-6">
-                <div class="form-group">
-                  <input type="password" name="confimacao_senha" id="confimacao_senha" class="form-control input-lg" placeholder="Confirmar Senha" tabindex="6">
-                </div>
-              </div>
-            </div>
+<div class="container" style="margin-top:7%;margin-bottom:3%;">
+  <div class="panel">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <form role="form">
+        <h2>Registre-se </h2>
+        <p> Cante junto com seus artistas favoritos!!</p>
+        <hr style="border: solid #E6E6E6; border-width: 5px 0 0; clear: both; margin: 22px 0 21px; height: 0;">
+        
+          <div class="form-group">
+            <input type="email" name="email" id="email" class="form-control input-lg"  [(ngModel)]="usuarioDTO.email" placeholder="Email" tabindex="4">
+          </div>
 
-            <hr style="border: solid #E6E6E6; border-width: 5px 0 0; clear: both; margin: 22px 0 21px; height: 0;">
-            <div class="row">
-              <div class="col-xs-12 col-md-6"><input type="button" (click)="cadastrar()"value="Registrar" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
-              <div class="col-xs-12 col-md-6"><a href="/login" class="btn btn-success btn-block btn-lg">Login</a></div>
-            </div>
-          </form>
-        </div>
+          <div class="form-group">
+            <input type="password" name="senha" id="senha" class="form-control input-lg" [(ngModel)]="usuarioDTO.senha" placeholder="Senha" tabindex="5">
+          </div>
+
+          <hr style="border: solid #E6E6E6; border-width: 5px 0 0; clear: both; margin: 22px 0 21px; height: 0;">
+          <div class="row">
+            <div class="col-xs-12 col-md-6"><input type="button" (click)="cadastrar()"value="Registrar" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+            <div class="col-xs-12 col-md-6"><a href="/login" class="btn btn-success btn-block btn-lg">Login</a></div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
+</div>

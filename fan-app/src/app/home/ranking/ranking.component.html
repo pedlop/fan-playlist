@@ -15,7 +15,7 @@
 </div>
 
 <br>
-<h2>Classificação Geral - Músicas Escolhidas para o Show</h2>
+<h2 style="text-align:center;">Classificação Geral - Músicas Escolhidas para o Show</h2>
 <div class="table-responsive">
     <table class="table table-striped table-bordered">
         <thead class="thead-inverse">
@@ -37,42 +37,4 @@
             </tr>
         </tbody>
     </table>
-</div>
-
-
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-sm-6">
-
-                <div class="card hovercard" *ngFor="let ranking of rankings">
-                    <div class="cardheader">
-                        {{ranking.colocacao}}ª
-                    </div>
-                    <div class="avatar">
-                        <img alt="" src={{ranking.fotoArtista}}>
-                    </div>
-                    <div class="info">
-                        <div class="title">
-                            <a target="_blank" href={{ranking.fotoAlbum}}>{{ranking.musica}} <!--- {{ranking.colocacao}}--></a>
-                        </div>
-                        <div class="desc">{{ranking.album}}</div>
-                    </div>
-                    <div class="bottom">
-                        <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a class="btn btn-danger btn-sm" rel="publisher" href="https://plus.google.com/+ahmshahnuralam">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
-                        <a class="btn btn-primary btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
 </div>
