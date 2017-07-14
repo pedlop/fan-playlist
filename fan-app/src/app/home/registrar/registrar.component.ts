@@ -22,7 +22,7 @@ export class RegistrarComponent implements OnInit {
 
   constructor(private webService: WebService, public router: Router) {
     this.controller = new ControllerLogin();
-    this.controller.setFormCdsClienteComponent(this, this.webService);
+    this.controller.setFormCdsClienteComponent(this, this.webService,this.router);
   }
 
 
@@ -34,7 +34,7 @@ export class RegistrarComponent implements OnInit {
     if (this.controller.tokenSincronizacaoOK) {
       this.webService.pegarTokenSincronizacao(true).subscribe((rest) => {
         this.controller.tokenSincronizacaoOK = false;
-        this.controller.setFormCdsClienteComponent(this, this.webService);
+        this.controller.setFormCdsClienteComponent(this, this.webService,this.router);
         this.webService.requisicaoPost(true,
             Endereco.CADASTRAR_USUARIO, rest.text(),
             this.usuarioDTO, this.controller);
@@ -52,10 +52,12 @@ class ControllerLogin extends Controller {
   public tokenSincronizacaoOK = true;
   private component: RegistrarComponent;
   private webservice : WebService;
+  public router : Router;
 
-  setFormCdsClienteComponent(f: RegistrarComponent,webservice : WebService) {
+  setFormCdsClienteComponent(f: RegistrarComponent,webservice : WebService,router : Router) {
     this.component = f;
     this.webservice = webservice;
+    this.router = router;
   }
 
   casoErroRede(): void {
@@ -73,7 +75,7 @@ class ControllerLogin extends Controller {
     /*Guarda o token de seguranca do usuario na memoria.*/
     localStorage.setItem(DnsWebService.storageTokenUsuario,
     this.response.text());
-
     localStorage.setItem('emaiUser', this.component.usuarioDTO.email);
+    this.router.navigate([''])
   }
 }
