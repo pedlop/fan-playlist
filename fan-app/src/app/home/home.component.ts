@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router : Router) { }
 
   ngOnInit() {
   }
@@ -25,5 +26,11 @@ export class HomeComponent implements OnInit {
  
   public expanded(event:any):void {
     console.log(event);
+  }
+
+  sair(){
+    localStorage.clear();
+    this.router.navigate(['']);
+    this.router.ngOnDestroy();
   }
 }

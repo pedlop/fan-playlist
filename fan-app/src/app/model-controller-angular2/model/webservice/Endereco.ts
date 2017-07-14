@@ -18,6 +18,6 @@ export class Endereco {
 
     public static FIND_BY_EMAIL = '/ControllerUsuario/findByEmail';
 
-    public static LOGIN_USUARIO  = '/api/login';
+    public static LOGIN_USUARIO  = '/ControllerLogin/login';
 
 }

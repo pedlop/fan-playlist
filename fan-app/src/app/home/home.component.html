@@ -49,6 +49,7 @@
             <li><a href="#contato">Entrar em Contato</a></li>
             <li><a [routerLink]="['registrar']" [routerLinkActive]="['router-link-active']">Registrar</a></li>
             <li><a [routerLink]="['perfil']" [routerLinkActive]="['router-link-active']">Perfil</a></li>
+            <li><a (click)="sair()">Sair</a></li>
           </ul>
         </li>
         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>

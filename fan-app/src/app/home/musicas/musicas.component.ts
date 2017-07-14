@@ -139,7 +139,7 @@ export class MusicasComponent implements OnInit {
 
   ngOnInit(){
     let usuario = localStorage.getItem('emaiUser');
-    if(usuario === 'undefined')
+    if(usuario === null)
       this.usuarioLogado = false;
     else
       this.usuarioLogado = true;

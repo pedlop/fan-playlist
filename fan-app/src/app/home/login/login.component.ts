@@ -76,6 +76,7 @@ class ControllerLogin extends Controller {
     /*Guarda o token de seguranca do usuario na memoria.*/
     localStorage.setItem(DnsWebService.storageTokenUsuario,
     this.response.text());
+    localStorage.setItem('UsuarioDTO',this.response.text());
     this.router.navigate([''])
   }
 }
